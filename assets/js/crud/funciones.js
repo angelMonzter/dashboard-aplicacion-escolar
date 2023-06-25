@@ -21,7 +21,7 @@ export function extraer_datos_form(id_form) {
 
 export function accionSimple(datos, archivo) {
   $.ajax({
-    url: 'http://localhost/dashboard-app-escolar/php/' + archivo,// Archivo PHP que procesará la subida
+    url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo,// Archivo PHP que procesará la subida
     type: 'POST',
     data: datos,
     cache: false,
@@ -40,7 +40,7 @@ export function accionSimple(datos, archivo) {
 
 export function insertDataFiles(datos, archivo) {
   $.ajax({
-    url: 'http://localhost/dashboard-app-escolar/php/' + archivo,// Archivo PHP que procesará la subida
+    url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo,// Archivo PHP que procesará la subida
     type: 'POST',
     data: datos,
     cache: false,
@@ -96,7 +96,7 @@ export function insertDataFiles(datos, archivo) {
           formData.append("accion", "consulta");
 
           $.ajax({
-            url: 'http://localhost/dashboard-app-escolar/php/privilegios.php',// Archivo PHP que procesará la subida
+            url: 'http://localhost/dashboard-aplicacion-escolar/php/privilegios.php',// Archivo PHP que procesará la subida
             type: 'POST',
             data: formData,
             cache: false,
@@ -233,7 +233,7 @@ export function consultaObj(id_tabla, id_modificar, detalles) {
   }
 
   $.ajax({
-    url: 'http://localhost/dashboard-app-escolar/php/' + archivo,// Archivo PHP que procesará la subida
+    url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo,// Archivo PHP que procesará la subida
     type: 'POST',
     data: formData,
     cache: false,
@@ -343,7 +343,7 @@ export function consultaObj(id_tabla, id_modificar, detalles) {
           //datos.append("detalles", '');
 
           /*$.ajax({
-            url: 'http://localhost/dashboard-app-escolar/php/privilegios_rol.php',// Archivo PHP que procesará la subida
+            url: 'http://localhost/dashboard-aplicacion-escolar/php/privilegios_rol.php',// Archivo PHP que procesará la subida
             type: 'POST',
             data: datos,
             cache: false,
@@ -492,7 +492,7 @@ export function insertData(accion, datos_tabla, archivo) {
   }
 
   $.ajax({
-    url: 'http://localhost/dashboard-app-escolar/php/' + archivo, // URL de tu API
+    url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo, // URL de tu API
     method: 'POST', // Método HTTP a utilizar
     data: JSON.stringify(datos),
     contentType: 'application/json',
@@ -943,7 +943,7 @@ export function eliminarObj(id_eliminar, archivo) {
           if (result.isConfirmed) {
 
             $.ajax({
-              url: 'http://localhost/dashboard-app-escolar/php/' + archivo, // URL de tu API
+              url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo, // URL de tu API
               method: 'POST', // Método HTTP a utilizar
               data: formData,
               cache: false,
@@ -983,7 +983,7 @@ export function eliminar(id_eliminar, archivo) {
           if (result.isConfirmed) {
 
             $.ajax({
-              url: 'http://localhost/dashboard-app-escolar/php/' + archivo, // URL de tu API
+              url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo, // URL de tu API
               method: 'POST', // Método HTTP a utilizar
               data: JSON.stringify(datos),
               contentType: 'application/json',
@@ -1033,7 +1033,7 @@ export function consulta(id_tabla, id_modificar, detalles) {
     }
 
     $.ajax({
-      url: 'http://localhost/dashboard-app-escolar/php/' + archivo, // URL de tu API
+      url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo, // URL de tu API
       method: 'POST', // Método HTTP a utilizar
       data: JSON.stringify(datos),
       contentType: 'application/json',
@@ -1587,7 +1587,7 @@ export function consulta(id_tabla, id_modificar, detalles) {
 
 export function filtros(id_tabla, array_filtros) {
   $.ajax({
-      url: 'http://localhost/dashboard-app-escolar/php/' + archivo, // URL de tu API
+      url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo, // URL de tu API
       method: 'POST', // Método HTTP a utilizar
       data: JSON.stringify(datos),
       contentType: 'application/json',

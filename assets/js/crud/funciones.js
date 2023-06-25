@@ -1601,5 +1601,5 @@ export function filtros(id_tabla, array_filtros) {
           }
         }
       }
-  )};
+  });
 }

@@ -1,0 +1,86 @@
+.login {
+
+}
+.bg-gradient-primary{
+	background-color: #00b6bc;
+	background-image: none;
+}
+.bg-gradient-primary:hover, .btn.bg-gradient-primary:hover{
+	background-color: #0ba3a5!important;
+	background-image: none;
+	box-shadow: 0 3px 3px 0 rgba(0, 182, 188, 0.15), 0 3px 1px -2px rgba(0, 182, 188, 0.2), 0 1px 5px 0 rgba(0, 182, 188, 0.15);
+}
+.navbar-vertical.navbar-expand-xs .navbar-collapse {
+  height: calc(100vh - 250px)!important;
+}
+.table_button{
+	margin: 0 5px;
+	background-color: blue;
+}
+.icono_tabla{
+	width: 50px;
+}
+.ck-editor{
+    width: 100%!important;
+		margin: 40px 0px!important;
+}
+.ck-editor__editable[role="textbox"] {
+    /* editing area */
+    min-height: 200px;
+}
+.form-check{
+	padding-left: 0px!important;
+}
+.input-group p{
+	display: block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+.icono-activado{
+	display: none;
+}
+.icono-desactivado{
+	display: none;
+}
+.oculto {
+    display: none;
+}
+.roles thead tr th{
+	padding: 0 8px 5px;
+}
+.roles a{
+	margin-bottom: 5px;
+}
+.roles a:first-child{
+	margin-right: 5px;
+}
+.roles .form-switch .form-check-input{
+	margin: 0 auto!important;
+}
+/** Responsive*/
+@media only screen and (max-width: 650px) {
+	.izquierda-col{
+        width: 33.3%;
+    }
+    .movil {
+        width: 100%;
+        align-items: center;
+    }
+	.footer_login ul li{
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+	}
+}
+ @media (max-width: 1199.98px){
+	.icono-activado{
+		display: block;
+	}
+	.g-sidenav-show:not(.rtl) .sidenav {
+		transform: translateX(-17.125rem);
+	}
+	.menu-activo{
+		transform: none!important;
+	}
+}

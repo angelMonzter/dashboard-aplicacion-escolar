@@ -397,9 +397,9 @@ include_once('../templates/header.php')
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Sticker</label>
-                          <select name="sticker_tipo_mensaje" id="sticker_tipo_mensaje" class="form-control" aria-label="Default select example" style="width: 200px; border-color: transparent;">
+                          <select name="sticker_tipo_mensaje" id="sticker_tipo_mensaje" class="form-control" aria-label="Default select example" style="width: 100%; border-color: transparent;">
                             <option selected>Selecciona una opción</option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/001.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/001.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg" width="80px"></option>
                             <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/002.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/002.svg"></option>
                             <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/003.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/003.svg"></option>
                             <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/004.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/004.svg"></option>
@@ -452,7 +452,7 @@ include_once('../templates/header.php')
                       </tr>
                     </thead>
                     <tbody class="text-center">
-                      
+
                     </tbody>
                     <tfoot>
                       <tr>
@@ -712,6 +712,11 @@ include_once('../templates/header.php')
 
       </div>
       <!-- Content -->
+
+      <!-- Side Config -->
+      <?php include_once('../templates/configside.php') ?>
+      <!-- Side Config -->
+
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

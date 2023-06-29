@@ -34,3 +34,22 @@ $('#myTab').on('click', '.nav-link', function (e) {
 	}
 	console.log(tabs_menu);
 });*/
+
+/* Dark Mode */
+
+const button = document.querySelector('#dark-version');
+
+window.addEventListener('load', () => {
+	const tema = localStorage.getItem('tema');
+	if (tema) {
+		document.body.classList.toggle('dark-version', tema === 'dark');
+		button.checked = tema === 'dark';
+	}
+})
+
+button.addEventListener('change', () => {
+	//document.body.classList.toggle()
+	localStorage.setItem('tema', button.checked ? 'dark' : 'light');
+	window.location.reload()
+
+})

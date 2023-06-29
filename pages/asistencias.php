@@ -418,34 +418,29 @@ include_once('../templates/header.php');
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Nombres</label>
-                          <input type="text" class="form-control w-100" name="nombre_scanner" id="nombre_scanner" aria-describedby="emailHelp"
-                            onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="nombre_scanner" id="nombre_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Apellidos</label>
-                          <input type="text" class="form-control w-100" name="app_scanner" id="app_scanner" aria-describedby="emailHelp"
-                            onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="app_scanner" id="app_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Correo electrónico</label>
-                          <input type="email" class="form-control w-100" name="correo_scanner" id="correo_scanner" aria-describedby="emailHelp"
-                            onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="email" class="form-control w-100" name="correo_scanner" id="correo_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="row">
                           <div class="col-6">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="form-label">Usuario</label>
-                              <input type="text" class="form-control w-100" name="user_scanner" id="user_scanner" aria-describedby="emailHelp"
-                                onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="text" class="form-control w-100" name="user_scanner" id="user_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                           <div class="col-6">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="form-label">Contraseña</label>
-                              <input type="password" class="form-control w-100" name="ctr_scanner" id="ctr_scanner" aria-describedby="emailHelp"
-                                onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="password" class="form-control w-100" name="ctr_scanner" id="ctr_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                         </div>
@@ -466,6 +461,11 @@ include_once('../templates/header.php');
 
       </div>
       <!-- Content -->
+
+      <!-- Side Config -->
+      <?php include_once('../templates/configside.php') ?>
+      <!-- Side Config -->
+
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

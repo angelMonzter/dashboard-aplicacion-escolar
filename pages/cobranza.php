@@ -367,29 +367,24 @@ include_once('../templates/header.php')
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Matrícula</label>
-                          <input type="text" class="form-control w-100" name="pago_matricula" id="pago_matricula"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="pago_matricula" id="pago_matricula" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Modo de Pago</label>
-                          <input type="text" class="form-control w-100" name="pago_modo" id="pago_modo"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="pago_modo" id="pago_modo" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Concepto</label>
-                          <input type="email" class="form-control w-100" name="pago_concepto" id="pago_concepto"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="email" class="form-control w-100" name="pago_concepto" id="pago_concepto" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Monto</label>
-                          <input type="email" class="form-control w-100" name="pago_monto" id="pago_monto"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="email" class="form-control w-100" name="pago_monto" id="pago_monto" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="form-check mt-3">
-                          <input class="form-check-input" type="checkbox" name="penalidad" id="penalidad" value=""
-                            checked="">
+                          <input class="form-check-input" type="checkbox" name="penalidad" id="penalidad" value="" checked="">
                           <label class="custom-control-label" for="customCheck1">AGREGAR PENALIDAD(10.00%)</label>
                         </div>
                         <div class="form-check mt-3">
@@ -475,6 +470,11 @@ include_once('../templates/header.php')
 
       </div>
       <!-- Content -->
+
+      <!-- Side Config -->
+      <?php include_once('../templates/configside.php') ?>
+      <!-- Side Config -->
+
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

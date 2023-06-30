@@ -52,9 +52,6 @@ include_once('../templates/header.php')
                       Registro
                     </a>
                   </li>
-                  <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
-                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
-                  </div>
                 </ul>
               </div>
             </div>
@@ -399,27 +396,27 @@ include_once('../templates/header.php')
                           <label class="input-group">Sticker</label>
                           <select name="sticker_tipo_mensaje" id="sticker_tipo_mensaje" class="form-control" aria-label="Default select example" style="width: 100%; border-color: transparent;">
                             <option selected>Selecciona una opción</option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg" width="80px"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/002.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/002.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/003.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/003.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/004.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/004.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/005.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/005.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/006.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/006.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/007.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/007.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/008.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/008.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/009.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/009.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/010.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/010.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/011.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/011.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/012.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/012.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/013.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/013.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/014.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/014.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/015.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/015.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/016.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/016.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/017.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/017.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/018.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/018.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/019.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/019.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/020.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/020.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/021.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/021.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/002.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/002.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/003.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/003.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/004.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/004.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/005.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/005.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/006.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/006.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/007.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/007.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/008.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/008.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/009.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/009.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/010.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/010.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/011.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/011.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/012.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/012.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/013.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/013.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/014.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/014.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/015.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/015.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/016.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/016.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/017.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/017.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/018.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/018.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/019.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/019.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/020.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/020.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/021.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/021.svg"></option>
                           </select>
                         </div>
                       </div>

@@ -46,9 +46,6 @@ include_once('../templates/header.php')
                       Modificar penalidad
                     </a>
                   </li>
-                  <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
-                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
-                  </div>
                 </ul>
               </div>
             </div>
@@ -227,12 +224,12 @@ include_once('../templates/header.php')
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-wrap justify-content-between">
-                    <div>
+                    <div class="col-12 col-md-9 col-lg-9">
                       <h5 class="font-weight-bolder">Como subir un archivo</h5>
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
-                    <div>
-                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal" data-bs-target="#archivoModal">
+                    <div class="col-12 col-md-3 col-lg-3">
+                      <button type="button" class="btn bg-secondary text-white col-12" data-bs-toggle="modal" data-bs-target="#archivoModal">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
                       </button>

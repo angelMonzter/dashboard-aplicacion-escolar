@@ -43,7 +43,7 @@ include_once('../templates/header.php')
         </div>
 
         <?php
-        //- Opciones
+        //# Opciones 1
         ?>
         <div class="col-12 mt-4 tab-content" role="tablist">
 
@@ -103,7 +103,7 @@ include_once('../templates/header.php')
 
             <div class="row">
 
-              <div class="col-6 mt-4">
+              <div class="col-12 col-md-6 mt-4">
                 <div class="card">
                   <div class="card-header">
                     <h5 class="font-weight-bolder mb-4 mt-2">Niveles</h5>
@@ -130,7 +130,7 @@ include_once('../templates/header.php')
                 </div>
               </div>
 
-              <div class="col-6 mt-4">
+              <div class="col-12 col-md-6 mt-4">
                 <div class="card">
                   <div class="card-header">
                     <h5 class="font-weight-bolder mb-4 mt-2">Grupos</h5>
@@ -228,8 +228,9 @@ include_once('../templates/header.php')
             </div>
           </div>
         </div>
+
         <?php
-        //? Opcion 2
+        //# Opcion 2
         ?>
         <div class="my-4 tab-pane fade" role="tabpanel" id="option2">
           <!-- Form -->

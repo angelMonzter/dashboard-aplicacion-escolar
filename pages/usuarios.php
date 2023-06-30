@@ -56,9 +56,6 @@ include_once('../templates/header.php')
                       Cargar Fotografías
                     </a>
                   </li>
-                  <!-- <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
-                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
-                  </div> -->
                 </ul>
               </div>
             </div>
@@ -71,7 +68,7 @@ include_once('../templates/header.php')
         <div class="col-12 mt-4 tab-content" role="tablist">
 
           <?php
-          //? Opcion 1
+          //# Opcion 1
           ?>
           <div class="my-4 tab-pane fade show active" role="tabpanel" id="option1">
             <!-- Formulario - Pasos-->
@@ -80,11 +77,11 @@ include_once('../templates/header.php')
                 <div class="card-body">
 
                   <div class="d-flex flex-wrap justify-content-between">
-                    <div class="col-12 col-md-9 col-lg-9">
+                    <div class="col-12 col-md-9 col-lg-9"> <!-- Agregar 1 -->
                       <h5 class="font-weight-bolder">Como subir un archivo</h5>
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
-                    <div class="col-12 col-md-3 col-lg-3">
+                    <div class="col-12 col-md-3 col-lg-3"><!-- Agregar 2 y col-12 ↓↓↓ -->
                       <button type="button" class="btn bg-secondary text-white col-12" data-bs-toggle="modal" data-bs-target="#archivoModal">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
@@ -208,7 +205,7 @@ include_once('../templates/header.php')
           </div>
 
           <?php
-          //? Opcion 2
+          //# Opcion 2
           ?>
           <div class="my-4 tab-pane fade" role="tabpanel" id="option2">
 
@@ -486,64 +483,66 @@ include_once('../templates/header.php')
                 <div class="card-header">
                   <div class="col-12 mt-2 mb-4">
                     <div class="mt-3" align="right">
-                      <div class="px-5">
+                      <div class="px-1">
                         <button type="button" class="btn btn-outline-danger eliminar_fila_multiple">Eliminar Seleccionados</button>
                         <button type="button" class="btn btn-outline-success">Exportar Excel</button>
                       </div>
                     </div>
                   </div>
-                  <table id="tabla_padres" data-name="padre.php" class="table table-striped" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th class="text-center">Seleccionar</th>
-                        <th class="text-center">Nombres</th>
-                        <th class="text-center">Apellidos</th>
-                        <th class="text-center">Correo Eléctronico</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-center">
-                      <tr class="text-center">
-                        <td>
-                          <div class="d-flex align-items-center justify-content-center">
-                            <div class="form-check is-filled">
-                              <input class="form-check-input" type="checkbox" id="customCheck1">
+                  <div class="table-responsive">
+                    <table id="tabla_padres" data-name="padre.php" class="table table-striped" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th class="text-center">Seleccionar</th>
+                          <th class="text-center">Nombres</th>
+                          <th class="text-center">Apellidos</th>
+                          <th class="text-center">Correo Eléctronico</th>
+                          <th class="text-center">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                        <tr class="text-center">
+                          <td>
+                            <div class="d-flex align-items-center justify-content-center">
+                              <div class="form-check is-filled">
+                                <input class="form-check-input" type="checkbox" id="customCheck1">
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>Luis</td>
-                        <td>REBOLLAR TOVAR</td>
-                        <td>soporte@appescolarv4.com</td>
-                        <td>
-                          <a class="btn text-white bg-info btnMostrar" data-bs-toggle="tooltip" data-bs-title="Asignar un hijo">
-                            <i class="fa-solid fa-user-tag"></i>
-                          </a>
-                          </a>
-                          <a class="btn text-white bg-secondary" data-bs-toggle="tooltip" data-bs-title="Detalles">
-                            <i class="fa-solid fa-eye"></i>
-                          </a>
-                          <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Editar">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                          </a>
-                          <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="QR">
-                            <i class="fa-solid fa-qrcode"></i>
-                          </a>
-                          <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
-                            <i class="fa-solid fa-trash"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th class="text-center">Seleccionar</th>
-                        <th class="text-center">Nombres</th>
-                        <th class="text-center">Apellidos</th>
-                        <th class="text-center">Correo Eléctronico</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </tfoot>
-                  </table>
+                          </td>
+                          <td>Luis</td>
+                          <td>REBOLLAR TOVAR</td>
+                          <td>soporte@appescolarv4.com</td>
+                          <td>
+                            <a class="btn text-white bg-info btnMostrar" data-bs-toggle="tooltip" data-bs-title="Asignar un hijo">
+                              <i class="fa-solid fa-user-tag"></i>
+                            </a>
+                            </a>
+                            <a class="btn text-white bg-secondary" data-bs-toggle="tooltip" data-bs-title="Detalles">
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Editar">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                            </a>
+                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="QR">
+                              <i class="fa-solid fa-qrcode"></i>
+                            </a>
+                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                              <i class="fa-solid fa-trash"></i>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th class="text-center">Seleccionar</th>
+                          <th class="text-center">Nombres</th>
+                          <th class="text-center">Apellidos</th>
+                          <th class="text-center">Correo Eléctronico</th>
+                          <th class="text-center">Acciones</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -914,36 +913,38 @@ include_once('../templates/header.php')
                       <button type="button" class="btn btn-outline-success">Exportar Excel</button>
                     </div>
                   </div>
-                  <table id="tabla_estudiantes" data-name="alumno.php" class="table table-striped" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th class="text-center">Seleccionar</th>
-                        <th class="text-center">Nombres</th>
-                        <th class="text-center">Apellidos</th>
-                        <th class="text-center">Matrícula</th>
-                        <th class="text-center">Sexo</th>
-                        <th class="text-center">Nivel</th>
-                        <th class="text-center">Grado</th>
-                        <th class="text-center">Grupo</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-center">
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th class="text-center">Seleccionar</th>
-                        <th class="text-center">Nombres</th>
-                        <th class="text-center">Apellidos</th>
-                        <th class="text-center">Matrícula</th>
-                        <th class="text-center">Sexo</th>
-                        <th class="text-center">Nivel</th>
-                        <th class="text-center">Grado</th>
-                        <th class="text-center">Grupo</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </tfoot>
-                  </table>
+                  <div class="table-responsive">
+                    <table id="tabla_estudiantes" data-name="alumno.php" class="table table-striped" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th class="text-center">Seleccionar</th>
+                          <th class="text-center">Nombres</th>
+                          <th class="text-center">Apellidos</th>
+                          <th class="text-center">Matrícula</th>
+                          <th class="text-center">Sexo</th>
+                          <th class="text-center">Nivel</th>
+                          <th class="text-center">Grado</th>
+                          <th class="text-center">Grupo</th>
+                          <th class="text-center">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th class="text-center">Seleccionar</th>
+                          <th class="text-center">Nombres</th>
+                          <th class="text-center">Apellidos</th>
+                          <th class="text-center">Matrícula</th>
+                          <th class="text-center">Sexo</th>
+                          <th class="text-center">Nivel</th>
+                          <th class="text-center">Grado</th>
+                          <th class="text-center">Grupo</th>
+                          <th class="text-center">Acciones</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1002,12 +1003,12 @@ include_once('../templates/header.php')
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-wrap justify-content-between">
-                    <div>
+                    <div class="col-12 col-md-9 col-lg-9">
                       <h5 class="font-weight-bolder">Como subir un archivo</h5>
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
-                    <div>
-                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal" data-bs-target="#fotoModal">
+                    <div class="col-12 col-md-3 col-lg-3">
+                      <button type="button" class="btn bg-secondary text-white col-12" data-bs-toggle="modal" data-bs-target="#fotoModal">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
                       </button>
@@ -1063,44 +1064,46 @@ include_once('../templates/header.php')
                     </div>
                   </div>
 
-                  <table id="example6" class="table table-striped" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th class="text-center">Archivos</th>
-                        <th class="text-center">Fecha de Subida</th>
-                        <th class="text-center">Estado</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-center">
-                      <tr>
-                        <td>fotos alumnos.zip</td>
-                        <td> 2022-08-16 11:24:11</td>
-                        <td>
-                          <span class="badge badge-sm bg-gradient-success">Guardado</span>
-                        </td>
-                        <td>
-                          <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="Validar">
-                            <i class="fa-regular fa-file-zipper"></i>
-                          </a>
-                          <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
-                            <i class="fa-regular fa-floppy-disk"></i>
-                          </a>
-                          <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
-                            <i class="fa-solid fa-trash"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th class="text-center">Archivos</th>
-                        <th class="text-center">Fecha de Subida</th>
-                        <th class="text-center">Estado</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </tfoot>
-                  </table>
+                  <div class="table-responsive">
+                    <table id="example6" class="table table-striped" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th class="text-center">Archivos</th>
+                          <th class="text-center">Fecha de Subida</th>
+                          <th class="text-center">Estado</th>
+                          <th class="text-center">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                        <tr>
+                          <td>fotos alumnos.zip</td>
+                          <td> 2022-08-16 11:24:11</td>
+                          <td>
+                            <span class="badge badge-sm bg-gradient-success">Guardado</span>
+                          </td>
+                          <td>
+                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="Validar">
+                              <i class="fa-regular fa-file-zipper"></i>
+                            </a>
+                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
+                              <i class="fa-regular fa-floppy-disk"></i>
+                            </a>
+                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                              <i class="fa-solid fa-trash"></i>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th class="text-center">Archivos</th>
+                          <th class="text-center">Fecha de Subida</th>
+                          <th class="text-center">Estado</th>
+                          <th class="text-center">Acciones</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>

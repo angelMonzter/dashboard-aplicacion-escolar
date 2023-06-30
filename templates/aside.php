@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link text-white active bg-gradient-primary" href="../pages/dashboard.php">
+        <a class="nav-link text-white" href="../pages/dashboard.php" id="dashboard.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">dashboard</i>
           </div>
@@ -18,7 +18,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/configuraciones.php">
+        <a class="nav-link text-white" href="../pages/configuraciones.php" id="configuraciones.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-gear"></i>
           </div>
@@ -26,7 +26,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/niveles_ciclos.php">
+        <a class="nav-link text-white" href="../pages/niveles_ciclos.php" id="niveles_ciclos.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-gear"></i>
           </div>
@@ -34,7 +34,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/usuarios.php">
+        <a class="nav-link text-white " href="../pages/usuarios.php" id="usuarios.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-users"></i>
           </div>
@@ -42,7 +42,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/mensajes.php">
+        <a class="nav-link text-white " href="../pages/mensajes.php" id="mensajes.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-message"></i>
           </div>
@@ -50,7 +50,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/extracurriculares.php">
+        <a class="nav-link text-white " href="../pages/extracurriculares.php" id="extracurriculares.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-futbol"></i>
           </div>
@@ -58,7 +58,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/seguimientos.php">
+        <a class="nav-link text-white " href="../pages/seguimientos.php" id="seguimientos.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-book"></i>
           </div>
@@ -66,7 +66,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/calificaciones.php">
+        <a class="nav-link text-white " href="../pages/calificaciones.php" id="calificaciones.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-list"></i>
           </div>
@@ -74,7 +74,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/cobranza.php">
+        <a class="nav-link text-white " href="../pages/cobranza.php" id="cobranza.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-money-bill-1-wave"></i>
           </div>
@@ -82,7 +82,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/asistencias.php">
+        <a class="nav-link text-white " href="../pages/asistencias.php" id="asistencias.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-list-check"></i>
           </div>
@@ -90,7 +90,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/calendario.php">
+        <a class="nav-link text-white " href="../pages/calendario.php" id="calendario.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-regular fa-calendar-days"></i>
           </div>
@@ -98,7 +98,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/materias.php">
+        <a class="nav-link text-white " href="../pages/materias.php" id="materias.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-pencil"></i>
           </div>
@@ -106,7 +106,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="../pages/tareas.php">
+        <a class="nav-link text-white " href="../pages/tareas.php" id="tareas.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-print"></i>
           </div>

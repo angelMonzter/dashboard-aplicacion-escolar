@@ -186,12 +186,12 @@ include_once('../templates/header.php')
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-wrap justify-content-between">
-                    <div>
+                    <div class="col-12 col-md-9 col-lg-9">
                       <h5 class="font-weight-bolder">Como subir un archivo</h5>
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
-                    <div>
-                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal" data-bs-target="#seguimientoModal">
+                    <div class="col-12 col-md-3 col-lg-3">
+                      <button type="button" class="btn bg-secondary text-white col-12" data-bs-toggle="modal" data-bs-target="#seguimientoModal">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
                       </button>
@@ -319,7 +319,7 @@ include_once('../templates/header.php')
                 <div class="card-header">
                   <div class="col-12 mt-2 mb-4">
                     <div class="mt-3" align="right">
-                      <div class="px-5">
+                      <div class="px-1">
                         <button type="button" class="btn btn-outline-info">Eliminar Seleccionados</button>
                         <button type="button" class="btn btn-outline-success">Exportar Excel</button>
                       </div>

@@ -53,3 +53,23 @@ button.addEventListener('change', () => {
 	window.location.reload()
 
 })
+
+/* Active - Menu */
+
+
+//obtenemos el nombre del archivo
+let url = window.location.href.split(/[/]/)[5];
+
+
+//obtener el id
+
+const identificador = document.getElementById(`${url}`);
+
+if (identificador.id === url) {
+	identificador.classList.add('active', 'bg-gradient-primary')
+	console.log(identificador);
+}
+
+/* const ele =  document.getElementById('usuarios.php');
+
+console.log(ele); */

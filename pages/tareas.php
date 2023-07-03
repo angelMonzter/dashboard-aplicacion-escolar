@@ -300,11 +300,6 @@ include_once('../templates/header.php');
       </div>
       <!-- Content -->
 
-      <!-- Side Config -->
-      <?php include_once('../templates/configside.php') ?>
-      <!-- Side Config -->
-
-
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>
       <!-- Footer -->

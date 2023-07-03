@@ -314,8 +314,8 @@ export function consultaObj(id_tabla, id_modificar, detalles) {
           datos.append("id_modificar", id);
           datos.append("detalles", '');
 
-          /*$.ajax({
-            url: 'http://localhost/dashboard-app-escolar/php/privilegios_rol.php',// Archivo PHP que procesará la subida
+          $.ajax({
+            url: 'http://localhost/dashboard-aplicacion-escolar/php/privilegios_rol.php',// Archivo PHP que procesará la subida
             type: 'POST',
             data: datos,
             cache: false,

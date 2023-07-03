@@ -1,7 +1,7 @@
 <?php
 $datatable = true;
 include_once('../templates/header.php')
-?>
+  ?>
 
 <body class="g-sidenav-show  bg-gray-200">
   <!-- ASIDE / MENU IZQUIERDO  -->
@@ -27,15 +27,21 @@ include_once('../templates/header.php')
 
                 <ul class="nav nav-pills nav-fill p-1" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#option1" role="tab" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#option1" role="tab"
+                      aria-selected="false">
                       Extracurriculares
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option2" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option2"
+                      aria-selected="false">
                       Cargar extracurriculares
                     </a>
                   </li>
+                  <div class="moving-tab position-absolute nav-link"
+                    style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
+                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -63,11 +69,13 @@ include_once('../templates/header.php')
                       <div class="col-lg-12">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Nombre</label>
-                          <input type="text" class="form-control w-100" id="nombre_extracurriculares" name="nombre_extracurriculares" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" id="nombre_extracurriculares"
+                            name="nombre_extracurriculares" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="mt-3" align="right">
-                        <a href="#!" class="btn bg-gradient-success mb-0 me-2" id="guardar_extracurriculares">Agregar</a>
+                        <a href="#!" class="btn bg-gradient-success mb-0 me-2"
+                          id="guardar_extracurriculares">Agregar</a>
                         <input type="hidden" class="id_modificar" name="id_modificar" value="">
                       </div>
                     </div>
@@ -86,7 +94,8 @@ include_once('../templates/header.php')
                     </div>
                   </div>
                   <div class="table-responsive">
-                    <table id="tabla_extracurriculares" data-name="extracurricular.php" class="table table-striped" style="width:100%">
+                    <table id="tabla_extracurriculares" data-name="extracurricular.php" class="table table-striped"
+                      style="width:100%">
                       <thead>
                         <tr>
                           <th class="text-center">Nombre</th>
@@ -127,7 +136,8 @@ include_once('../templates/header.php')
                           </div>
 
                         </li>
-                        <a class="btn btn-link text-danger text-gradient px-3 mb-0 mostrar_detalles" data-id="" href="#!">
+                        <a class="btn btn-link text-danger text-gradient px-3 mb-0 mostrar_detalles" data-id=""
+                          href="#!">
                           <i class="material-icons text-sm me-2">delete</i>
                           Cerrar
                         </a>
@@ -143,14 +153,15 @@ include_once('../templates/header.php')
                         <div class="col-12 px-2 my-4">
                           <div class="input-group input-group-dynamic mt-3">
                             <label class="input-group">Agregar estudiante</label>
-                            <select name="extra_estudiante" id="extra_estudiante" class="form-control" aria-label="Default select example">
+                            <select name="extra_estudiante" id="extra_estudiante" class="form-control"
+                              aria-label="Default select example">
                               <option selected>Estudiante</option>
                             </select>
                           </div>
                           <div class="mt-3" align="right">
                             <a href="#!" class="btn bg-gradient-success mb-0 me-2" id="guardar_extra_alumno">Agregar</a>
                             <!-- <input type="hidden" class="id_modificar" name="id_modificar" value=""> -->
-                            <input type="hidden" class="sid_extracurricular" name="sid_extracurricular" id="sid_extracurricular" value="">
+                            <input type="hidden" class="sid_extracurricular" name="sid_extracurricular"  id="sid_extracurricular" value="">
                           </div>
                         </div>
                       </div>
@@ -172,7 +183,7 @@ include_once('../templates/header.php')
                               </tr>
                             </thead>
                             <tbody class="text_center">
-
+                              
                             </tbody>
                             <tfoot>
                               <tr>
@@ -207,12 +218,13 @@ include_once('../templates/header.php')
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-wrap justify-content-between">
-                    <div class="col-12 col-md-9 col-lg-9">
+                    <div>
                       <h5 class="font-weight-bolder">Como subir un archivo</h5>
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
-                    <div class="col-12 col-md-3 col-lg-3">
-                      <button type="button" class="btn bg-secondary text-white col-12" data-bs-toggle="modal" data-bs-target="#ayuda">
+                    <div>
+                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal"
+                        data-bs-target="#ayuda">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
                       </button>
@@ -286,13 +298,16 @@ include_once('../templates/header.php')
                             <span class="badge badge-sm bg-gradient-success">Guardado</span>
                           </td>
                           <td>
-                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="Validar">
+                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip"
+                              data-bs-title="Validar">
                               <i class="fa-regular fa-square-check"></i>
                             </a>
-                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
+                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip"
+                              data-bs-title="Guardar">
                               <i class="fa-regular fa-floppy-disk"></i>
                             </a>
-                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip"
+                              data-bs-title="Eliminar">
                               <i class="fa-solid fa-trash"></i>
                             </a>
                           </td>
@@ -335,7 +350,8 @@ include_once('../templates/header.php')
                 <li>Extra N</li>
               </ul>
               <p>Puede descargar el siguiente archivo base para cargar su información.</p>
-              <a href="https://api.aplicacionescolar.net/general/general-file-1601304456015.xlsx" target="_blank" rel="noopener noreferrer" class="btn btn-success">
+              <a href="https://api.aplicacionescolar.net/general/general-file-1601304456015.xlsx" target="_blank"
+                rel="noopener noreferrer" class="btn btn-success">
                 <i class="fa-solid fa-file-excel"></i>
                 Archivo Base
               </a>
@@ -349,11 +365,6 @@ include_once('../templates/header.php')
         </div>
       </div>
       <!-- Content -->
-
-      <!-- Side Config -->
-      <?php include_once('../templates/configside.php') ?>
-      <!-- Side Config -->
-
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

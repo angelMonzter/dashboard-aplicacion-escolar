@@ -36,6 +36,10 @@ include_once('../templates/header.php');
                       Asignación de Materias
                     </a>
                   </li>
+                  </li>
+                  <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
+                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -63,13 +67,15 @@ include_once('../templates/header.php');
                       <div class="col-lg-5">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Nombre</label>
-                          <input type="text" class="form-control w-100" name="materia_nombre" id="materia_nombre" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="materia_nombre" id="materia_nombre"
+                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-5">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Grupo</label>
-                          <input type="text" class="form-control w-100" name="materia_grupo" id="materia_grupo" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="materia_grupo" id="materia_grupo"
+                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-2">
@@ -131,7 +137,8 @@ include_once('../templates/header.php');
                       <div class="col-lg-3">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Seleccione un profesor</label>
-                          <select name="asignar_profesor" id="asignar_profesor" class="form-control" aria-label="Default select example">
+                          <select name="asignar_profesor" id="asignar_profesor" class="form-control"
+                            aria-label="Default select example">
                             <option selected>Selecciona una opción</option>
                             <option value="1">Padre 1</option>
                             <option value="2">Padre 2</option>
@@ -142,7 +149,8 @@ include_once('../templates/header.php');
                       <div class="col-lg-3">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Seleccione una materia</label>
-                          <select name="asignar_materias" id="asignar_materia" class="form-control" aria-label="Default select example">
+                          <select name="asignar_materias" id="asignar_materia" class="form-control"
+                            aria-label="Default select example">
                             <option selected>Selecciona una opción</option>
                             <option value="1">Español</option>
                             <option value="2">Matematicas</option>
@@ -153,7 +161,8 @@ include_once('../templates/header.php');
                       <div class="col-lg-2">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Nivel</label>
-                          <select name="asignar_nivel" id="asignar_nivel" class="form-control" aria-label="Default select example">
+                          <select name="asignar_nivel" id="asignar_nivel" class="form-control"
+                            aria-label="Default select example">
                             <option selected>Selecciona una opción</option>
                             <option value="1">Primaria </option>
                             <option value="2">Secundaria </option>
@@ -164,7 +173,8 @@ include_once('../templates/header.php');
                       <div class="col-lg-2">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Grado</label>
-                          <select name="asignar_grado" id="asignar_grado" class="form-control" aria-label="Default select example">
+                          <select name="asignar_grado" id="asignar_grado" class="form-control"
+                            aria-label="Default select example">
                             <option selected>Selecciona una opción</option>
                             <option value="1">1 </option>
                             <option value="2">2</option>
@@ -175,7 +185,8 @@ include_once('../templates/header.php');
                       <div class="col-lg-2">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Grupo</label>
-                          <select name="asignar_grupo" id="asignar_grupo" class="form-control" aria-label="Default select example">
+                          <select name="asignar_grupo" id="asignar_grupo" class="form-control"
+                            aria-label="Default select example">
                             <option selected>Selecciona una opción</option>
                             <option value="1">A </option>
                             <option value="2">B </option>
@@ -236,11 +247,6 @@ include_once('../templates/header.php');
 
       </div>
       <!-- Content -->
-
-      <!-- Side Config -->
-      <?php include_once('../templates/configside.php') ?>
-      <!-- Side Config -->
-
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

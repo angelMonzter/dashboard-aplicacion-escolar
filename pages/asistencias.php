@@ -46,6 +46,10 @@ include_once('../templates/header.php');
                       Nuevo scanner
                     </a>
                   </li>
+                  </li>
+                  <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
+                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -414,29 +418,34 @@ include_once('../templates/header.php');
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Nombres</label>
-                          <input type="text" class="form-control w-100" name="nombre_scanner" id="nombre_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="nombre_scanner" id="nombre_scanner" aria-describedby="emailHelp"
+                            onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Apellidos</label>
-                          <input type="text" class="form-control w-100" name="app_scanner" id="app_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="app_scanner" id="app_scanner" aria-describedby="emailHelp"
+                            onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Correo electrónico</label>
-                          <input type="email" class="form-control w-100" name="correo_scanner" id="correo_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="email" class="form-control w-100" name="correo_scanner" id="correo_scanner" aria-describedby="emailHelp"
+                            onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="row">
                           <div class="col-6">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="form-label">Usuario</label>
-                              <input type="text" class="form-control w-100" name="user_scanner" id="user_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="text" class="form-control w-100" name="user_scanner" id="user_scanner" aria-describedby="emailHelp"
+                                onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                           <div class="col-6">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="form-label">Contraseña</label>
-                              <input type="password" class="form-control w-100" name="ctr_scanner" id="ctr_scanner" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="password" class="form-control w-100" name="ctr_scanner" id="ctr_scanner" aria-describedby="emailHelp"
+                                onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                         </div>
@@ -457,11 +466,6 @@ include_once('../templates/header.php');
 
       </div>
       <!-- Content -->
-
-      <!-- Side Config -->
-      <?php include_once('../templates/configside.php') ?>
-      <!-- Side Config -->
-
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

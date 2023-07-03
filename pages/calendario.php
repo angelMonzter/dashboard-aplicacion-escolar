@@ -28,7 +28,8 @@
                 <h5 class="font-weight-bolder">Nuevo Evento</h5>
                 <div class="input-group input-group-dynamic mt-3">
                   <label class="form-label">Nombre del Evento</label>
-                  <input type="email" class="form-control w-100 mb-2" name="nombre_evento" id="nombre_evento" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                  <input type="email" class="form-control w-100 mb-2" name="nombre_evento" id="nombre_evento"
+                    aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                   <p><b>Nota:</b> el nombre del evento no puede sobrepasar los 120 caractéres.</p>
                 </div>
                 <div class="input-group input-group-static my-3">
@@ -41,7 +42,8 @@
                 </div>
                 <div class="input-group input-group-dynamic mt-3">
                   <label class="input-group">Nivel</label>
-                  <select name="nivel_evento" id="nivel_evento" class="form-control" aria-label="Default select example">
+                  <select name="nivel_evento" id="nivel_evento" class="form-control"
+                    aria-label="Default select example">
                     <option selected>Selecciona una opción</option>
                     <option value="Primaria">Primaria</option>
                     <option value="Secundaria">Secundaria</option>
@@ -51,7 +53,8 @@
                 </div>
                 <div class="input-group input-group-dynamic mt-3">
                   <label class="input-group">Grado</label>
-                  <select name="grado_evento" id="grado_evento" class="form-control" aria-label="Default select example">
+                  <select name="grado_evento" id="grado_evento" class="form-control"
+                    aria-label="Default select example">
                     <option selected>Selecciona una opción</option>
                     <option value="1">1°</option>
                     <option value="2">2°</option>
@@ -61,7 +64,8 @@
                 </div>
                 <div class="input-group input-group-dynamic mt-3">
                   <label class="input-group">Grupo</label>
-                  <select name="grupo_evento" id="grupo_evento" class="form-control" aria-label="Default select example">
+                  <select name="grupo_evento" id="grupo_evento" class="form-control"
+                    aria-label="Default select example">
                     <option selected>Selecciona una opción</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -74,17 +78,12 @@
                   <input type="hidden" class="id_modificar" name="id_modificar" value="">
                 </div>
               </form>
-
+              
             </div>
           </div>
         </div>
       </div>
       <!-- Content -->
-
-      <!-- Side Config -->
-      <?php include_once('../templates/configside.php') ?>
-      <!-- Side Config -->
-
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

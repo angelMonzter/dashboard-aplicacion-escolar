@@ -5,7 +5,6 @@ class Administrador extends DBA{
 		$this->sentencia = "INSERT INTO administrador VALUES ('$id_admin','$nombre','$apellido','$correo','$contrasena','$privilegios');";
 		return $this->ejecutar_sentencia();
 	}
-    //prueba 
 	public function consulta() {
 		$this->sentencia = "SELECT * FROM administrador;";
 		return $this->obtener_sentencia();

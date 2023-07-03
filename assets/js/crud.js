@@ -656,7 +656,7 @@ $('.iniciar_sesion').on('click', function(e) {
     }
 
     $.ajax({
-      url: 'http://localhost/dashboard-app-escolar/php/usuario.php', // URL de tu API
+      url: 'http://localhost/dashboard-aplicacion-escolar/php/usuario.php', // URL de tu API
       method: 'POST', // Método HTTP a utilizar
       data: JSON.stringify(datos),
       contentType: 'application/json',
@@ -698,7 +698,7 @@ $('.recuperar_password').on('click', function(e) {
     }
 
     $.ajax({
-      url: 'http://localhost/dashboard-app-escolar/php/usuario.php', // URL de tu API
+      url: 'http://localhost/dashboard-aplicacion-escolar/php/usuario.php', // URL de tu API
       method: 'POST', // Método HTTP a utilizar
       data: JSON.stringify(datos),
       contentType: 'application/json',
@@ -762,7 +762,7 @@ function eliminarRegistrosMultiple(registrosSeleccionados, archivo) {
           if (result.isConfirmed) {
 
             $.ajax({
-              url: 'http://localhost/dashboard-app-escolar/php/' + archivo, // URL de tu API
+              url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo, // URL de tu API
               method: 'POST', // Método HTTP a utilizar
               data: JSON.stringify(datos),
               contentType: 'application/json',
@@ -796,14 +796,14 @@ function generarQR(qrContainer) {
 
 function obtenerToken(qrCode) {
   // Llama al backend PHP para obtener el token
-  fetch('http://localhost/dashboard-app-escolar/php/generar-qr.php')
+  fetch('http://localhost/dashboard-aplicacion-escolar/php/generar-qr.php')
     .then(response => response.text())
     .then(token => qrCode.makeCode(token));
 }
 
 // Verifica el token escaneado por el usuario
 /*function verificarToken(tokenEscaneado) {
-  fetch('http://localhost/dashboard-app-escolar/php/login_status_qr.php?token=' + tokenEscaneado)
+  fetch('http://localhost/dashboard-aplicacion-escolar/php/login_status_qr.php?token=' + tokenEscaneado)
     .then(response => response.text())
     .then(result => {
       if (result === 'success') {
@@ -837,7 +837,7 @@ function obtenerTokenCamara() {
               // Enviar los datos de la imagen al servidor para el análisis del código QR
 
               $.ajax({
-                  url: 'http://localhost/dashboard-app-escolar/php/login_status_qr.php',
+                  url: 'http://localhost/dashboard-aplicacion-escolar/php/login_status_qr.php',
                   method: 'POST',
                   dataType: 'json',
                   data: {
@@ -1287,7 +1287,7 @@ $( document ).ready(function() {
     let id_instituto = ('#sid_instituto');
 
     $.ajax({
-      url: 'http://localhost/dashboard-app-escolar/php/sids.php',
+      url: 'http://localhost/dashboard-aplicacion-escolar/php/sids.php',
       type: 'POST',
       data: {
         id: id_instituto,

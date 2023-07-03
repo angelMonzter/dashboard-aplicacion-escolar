@@ -9,104 +9,104 @@
   <hr class="horizontal light mt-0 mb-2">
   <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
-      <li class="nav-item" privilegio="Estadisticas">
-        <a class="nav-link text-white active bg-gradient-primary" href="../pages/dashboard.php">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="../pages/dashboard.php" id="dashboard.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">dashboard</i>
           </div>
           <span class="nav-link-text ms-1">Estadísticas</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Configuraciones">
-        <a class="nav-link text-white " href="../pages/configuraciones.php">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="../pages/configuraciones.php" id="configuraciones.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-gear"></i>
           </div>
           <span class="nav-link-text ms-1">Configuraciones</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Usuarios y padres">
-        <a class="nav-link text-white " href="../pages/niveles_ciclos.php">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="../pages/niveles_ciclos.php" id="niveles_ciclos.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-gear"></i>
           </div>
           <span class="nav-link-text ms-1">Niveles y Ciclos</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Usuarios y padres">
-        <a class="nav-link text-white " href="../pages/usuarios.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/usuarios.php" id="usuarios.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-users"></i>
           </div>
           <span class="nav-link-text ms-1">Usuarios y Padres</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Mensajes">
-        <a class="nav-link text-white " href="../pages/mensajes.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/mensajes.php" id="mensajes.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-message"></i>
           </div>
           <span class="nav-link-text ms-1">Mensajes</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Extracurriculares">
-        <a class="nav-link text-white " href="../pages/extracurriculares.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/extracurriculares.php" id="extracurriculares.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-futbol"></i>
           </div>
           <span class="nav-link-text ms-1">Extracurriculares</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Seguimientos">
-        <a class="nav-link text-white " href="../pages/seguimientos.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/seguimientos.php" id="seguimientos.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-book"></i>
           </div>
           <span class="nav-link-text ms-1">Seguimientos</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Calificaciones">
-        <a class="nav-link text-white " href="../pages/calificaciones.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/calificaciones.php" id="calificaciones.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-list"></i>
           </div>
           <span class="nav-link-text ms-1">Calificaciones</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Cobranza">
-        <a class="nav-link text-white " href="../pages/cobranza.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/cobranza.php" id="cobranza.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-money-bill-1-wave"></i>
           </div>
           <span class="nav-link-text ms-1">Cobranza</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Asistencias">
-        <a class="nav-link text-white " href="../pages/asistencias.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/asistencias.php" id="asistencias.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-list-check"></i>
           </div>
           <span class="nav-link-text ms-1">Asistencia</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Calendario">
-        <a class="nav-link text-white " href="../pages/calendario.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/calendario.php" id="calendario.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-regular fa-calendar-days"></i>
           </div>
           <span class="nav-link-text ms-1">Calendario</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Materias">
-        <a class="nav-link text-white " href="../pages/materias.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/materias.php" id="materias.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-pencil"></i>
           </div>
           <span class="nav-link-text ms-1">Materias</span>
         </a>
       </li>
-      <li class="nav-item" privilegio="Tareas">
-        <a class="nav-link text-white " href="../pages/tareas.php">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="../pages/tareas.php" id="tareas.php">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa-solid fa-print"></i>
           </div>

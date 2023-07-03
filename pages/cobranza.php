@@ -46,9 +46,6 @@ include_once('../templates/header.php')
                       Modificar penalidad
                     </a>
                   </li>
-                  <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
-                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
-                  </div>
                 </ul>
               </div>
             </div>
@@ -227,12 +224,12 @@ include_once('../templates/header.php')
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-wrap justify-content-between">
-                    <div>
+                    <div class="col-12 col-md-9 col-lg-9">
                       <h5 class="font-weight-bolder">Como subir un archivo</h5>
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
-                    <div>
-                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal" data-bs-target="#archivoModal">
+                    <div class="col-12 col-md-3 col-lg-3">
+                      <button type="button" class="btn bg-secondary text-white col-12" data-bs-toggle="modal" data-bs-target="#archivoModal">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
                       </button>
@@ -367,29 +364,24 @@ include_once('../templates/header.php')
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Matrícula</label>
-                          <input type="text" class="form-control w-100" name="pago_matricula" id="pago_matricula"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="pago_matricula" id="pago_matricula" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Modo de Pago</label>
-                          <input type="text" class="form-control w-100" name="pago_modo" id="pago_modo"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" name="pago_modo" id="pago_modo" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Concepto</label>
-                          <input type="email" class="form-control w-100" name="pago_concepto" id="pago_concepto"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="email" class="form-control w-100" name="pago_concepto" id="pago_concepto" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Monto</label>
-                          <input type="email" class="form-control w-100" name="pago_monto" id="pago_monto"
-                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="email" class="form-control w-100" name="pago_monto" id="pago_monto" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                         <div class="form-check mt-3">
-                          <input class="form-check-input" type="checkbox" name="penalidad" id="penalidad" value=""
-                            checked="">
+                          <input class="form-check-input" type="checkbox" name="penalidad" id="penalidad" value="" checked="">
                           <label class="custom-control-label" for="customCheck1">AGREGAR PENALIDAD(10.00%)</label>
                         </div>
                         <div class="form-check mt-3">
@@ -475,6 +467,11 @@ include_once('../templates/header.php')
 
       </div>
       <!-- Content -->
+
+      <!-- Side Config -->
+      <?php include_once('../templates/configside.php') ?>
+      <!-- Side Config -->
+
 
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>

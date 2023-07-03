@@ -34,16 +34,16 @@
               <div class="col-12 col-md-6 col-xl-6 mt-md-0 mt-4 position-relative">
                 <div class="card card-plain h-100">
                   <div class="card-header pb-0 p-3">
-                  <div class="row">
-                    <div class="col-md-8 d-flex align-items-center">
-                      <h6 class="mb-0">Información de perfil</h6>
+                    <div class="row">
+                      <div class="col-md-8 d-flex align-items-center">
+                        <h6 class="mb-0">Información de perfil</h6>
+                      </div>
+                      <div class="col-md-4 text-end">
+                        <a href="javascript:;">
+                          <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" aria-hidden="true" aria-label="Edit Profile" data-bs-original-title="Edit Profile"></i><span class="sr-only">Mi perfil</span>
+                        </a>
+                      </div>
                     </div>
-                    <div class="col-md-4 text-end">
-                      <a href="javascript:;">
-                      <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" aria-hidden="true" aria-label="Edit Profile" data-bs-original-title="Edit Profile"></i><span class="sr-only">Mi perfil</span>
-                      </a>
-                    </div>
-                  </div>
                   </div>
                   <div class="card-body p-3" id="informacion_perfil" data-name="usuario.php" usuario="<?php echo $_SESSION['id_usuario']; ?>">
                   </div>
@@ -53,18 +53,18 @@
               <div class="col-12 col-md-6 col-xl-6 mt-md-0 mt-4 position-relative">
                 <div class="card card-plain h-100">
                   <div class="card-header pb-0 p-3">
-                  <div class="row">
-                    <div class="col-md-8 d-flex align-items-center">
-                      <h6 class="mb-0">Configuración de escuela</h6>
-                    </div>
-                    <div class="col-md-4 text-end">
-                      <a href="javascript:;">
-                      <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" aria-hidden="true" aria-label="Edit Profile" data-bs-original-title="Edit Profile"></i><span class="sr-only">Edit Profile</span>
-                      </a>
+                    <div class="row">
+                      <div class="col-md-8 d-flex align-items-center">
+                        <h6 class="mb-0">Configuración de escuela</h6>
+                      </div>
+                      <div class="col-md-4 text-end">
+                        <a href="javascript:;">
+                          <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" aria-hidden="true" aria-label="Edit Profile" data-bs-original-title="Edit Profile"></i><span class="sr-only">Edit Profile</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  </div>
-                  <div class="card-body p-3" id="configuracion_escuela" data-name="instituto.php" instituto="<?php echo $_SESSION['sid_instituto']; ?>" >
+                  <div class="card-body p-3" id="configuracion_escuela" data-name="instituto.php" instituto="<?php echo $_SESSION['sid_instituto']; ?>">
                   </div>
                   <div class="col-12 d-flex justify-content-end">
                     <div class="mt-3 botones_configuracion">
@@ -83,6 +83,11 @@
       </div>
       <!-- Content -->
 
+      <!-- Side Config -->
+      <?php include_once('../templates/configside.php') ?>
+      <!-- Side Config -->
+
+
       <!-- Footer -->
       <?php include_once('../templates/footer.php') ?>
       <!-- Footer -->
@@ -100,4 +105,3 @@
 </body>
 
 </html>
-

@@ -36,9 +36,6 @@ include_once('../templates/header.php')
                       Configuración de ciclos
                     </a>
                   </li>
-                  <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
-                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
-                  </div>
                 </ul>
               </div>
             </div>
@@ -46,7 +43,7 @@ include_once('../templates/header.php')
         </div>
 
         <?php
-        //- Opciones
+        //# Opciones 1
         ?>
         <div class="col-12 mt-4 tab-content" role="tablist">
 
@@ -106,7 +103,7 @@ include_once('../templates/header.php')
 
             <div class="row">
 
-              <div class="col-6 mt-4">
+              <div class="col-12 col-md-6 mt-4">
                 <div class="card">
                   <div class="card-header">
                     <h5 class="font-weight-bolder mb-4 mt-2">Niveles</h5>
@@ -119,7 +116,7 @@ include_once('../templates/header.php')
                           </tr>
                         </thead>
                         <tbody class="text-center">
-                          
+
                         </tbody>
                         <tfoot>
                           <tr>
@@ -133,7 +130,7 @@ include_once('../templates/header.php')
                 </div>
               </div>
 
-              <div class="col-6 mt-4">
+              <div class="col-12 col-md-6 mt-4">
                 <div class="card">
                   <div class="card-header">
                     <h5 class="font-weight-bolder mb-4 mt-2">Grupos</h5>
@@ -295,46 +292,51 @@ include_once('../templates/header.php')
             </div>
           </div>
 
-        </div>
-
       </div>
-      <!-- Cargar Archivo -->
-      <div class="modal fade" id="ayuda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">¿Cómo cargar el archivo?</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>El Archivo debe tener las siguientes cabeceras:</p>
-              <ul>
-                <li>Matricula</li>
-                <li>Extra 1</li>
-                <li>Extra 2</li>
-                <li>Extra 3</li>
-                <li>...</li>
-                <li>Extra N</li>
-              </ul>
-              <p>Puede descargar el siguiente archivo base para cargar su información.</p>
-              <a href="https://api.aplicacionescolar.net/general/general-file-1601304456015.xlsx" target="_blank" rel="noopener noreferrer" class="btn btn-success">
-                <i class="fa-solid fa-file-excel"></i>
-                Archivo Base
-              </a>
-              <p>A continuación una foto de como debería verse el archivo al final:</p>
-              <img src="/static/media/extras.64399ba0.png" alt="calificaciones_image" style="width: 90%; padding: 2%;">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
-            </div>
+
+    </div>
+    <!-- Cargar Archivo -->
+    <div class="modal fade" id="ayuda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">¿Cómo cargar el archivo?</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>El Archivo debe tener las siguientes cabeceras:</p>
+            <ul>
+              <li>Matricula</li>
+              <li>Extra 1</li>
+              <li>Extra 2</li>
+              <li>Extra 3</li>
+              <li>...</li>
+              <li>Extra N</li>
+            </ul>
+            <p>Puede descargar el siguiente archivo base para cargar su información.</p>
+            <a href="https://api.aplicacionescolar.net/general/general-file-1601304456015.xlsx" target="_blank" rel="noopener noreferrer" class="btn btn-success">
+              <i class="fa-solid fa-file-excel"></i>
+              Archivo Base
+            </a>
+            <p>A continuación una foto de como debería verse el archivo al final:</p>
+            <img src="/static/media/extras.64399ba0.png" alt="calificaciones_image" style="width: 90%; padding: 2%;">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
           </div>
         </div>
       </div>
-      <!-- Content -->
+    </div>
+    <!-- Content -->
 
-      <!-- Footer -->
-      <?php include_once('../templates/footer.php') ?>
-      <!-- Footer -->
+    <!-- Side Config -->
+    <?php include_once('../templates/configside.php') ?>
+    <!-- Side Config -->
+
+
+    <!-- Footer -->
+    <?php include_once('../templates/footer.php') ?>
+    <!-- Footer -->
 
     </div>
 

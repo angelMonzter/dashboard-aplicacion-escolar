@@ -243,24 +243,18 @@ $('#mensajes').on('submit', function (e) {
   let formData = new FormData(this); // Crea un objeto FormData con los datos del formulario
   formData.append("accion", "insertar");
 
-console.log(formData);
-  //insertDataFiles(formData, "mensaje.php");
-
-  /*const datos_tabla = {
-      sid_tipo: datos_formulario[0].value,
-      sid_estudiante: datos_formulario[1].value,
-      asunto_mensaje: datos_formulario[2].value,
-      fecha_envio_mensaje: datos_formulario[3].value,
-      hora_envio_mensaje: datos_formulario[4].value,
-      minutos_envio_mensaje: datos_formulario[5].value,
-      repetir_mensaje: datos_formulario[6].value,
-      periodo_mensaje: datos_formulario[7].value,
-      fecha_fin_mensaje: datos_formulario[8].value,
-      id: datos_formulario[9].value,
-  };*/
-
-  //insertData('insertar', datos_tabla, 'mensaje.php');
+  insertDataFiles(formData, "mensaje.php");
 });
+
+$('#ciclos').on('submit', function (e) {
+  e.preventDefault();
+
+  let formData = new FormData(this); // Crea un objeto FormData con los datos del formulario
+  formData.append("accion", "insertar");
+
+  insertDataFiles(formData, "ciclo.php");
+});
+
 
 $('#add_atributo').on('click', function (e) {
   e.preventDefault();
@@ -329,6 +323,9 @@ $('#guardar_evento').on('click', function (e) {
   };
 
   insertData('insertar', datos_tabla, 'evento.php');
+  setTimeout(function() {
+      window.location.href = 'pages/usuarios.php';
+  }, 2000);
 });
 
 $('#guardar_materia').on('click', function (e) {
@@ -507,6 +504,14 @@ $('#tabla_rol').on('click', '.eliminar_fila', function (e) {
   eliminarObj(id_eliminar, 'rol.php');
 });
 
+$('#tabla_ciclos').on('click', '.eliminar_fila', function (e) {
+  e.preventDefault();
+
+  const id_eliminar = $(this).attr('data-id');
+
+  eliminarObj(id_eliminar, 'ciclo.php');
+});
+
 $('#tabla_seguimientos').on('click', '.eliminar_fila', function (e) {
   e.preventDefault();
 
@@ -625,6 +630,14 @@ $('#tabla_rol').on('click', '.editar_fila', function (e) {
   const id_modificar = $(this).attr('data-id');
  
   consultaObj('#tabla_rol', id_modificar, '');
+});
+
+$('#tabla_ciclos').on('click', '.editar_fila', function (e) {
+  e.preventDefault();
+
+  const id_modificar = $(this).attr('data-id');
+ 
+  consultaObj('#tabla_ciclos', id_modificar, '');
 });
 
 $('.iniciar_sesion').on('click', function(e) {
@@ -959,6 +972,9 @@ console.log(privilegio_activo);
           formData.append("id_modificar", "si");
 
           insertDataFiles(formData, "privilegios_rol.php");
+          setTimeout(function() {
+              window.location.href = 'pages/usuarios.php';
+          }, 2000);
 
           console.log('modificamos activo a no');
         }else{
@@ -970,6 +986,10 @@ console.log(privilegio_activo);
           formData.append("id_modificar", "si");
 
           insertDataFiles(formData, "privilegios_rol.php");
+          setTimeout(function() {
+              window.location.href = 'pages/usuarios.php';
+          }, 2000);
+
           console.log('paso, modificamos activo a si');
         }
       }
@@ -991,6 +1011,10 @@ console.log(privilegio_activo);
           formData.append("id_modificar", "si");
 
           insertDataFiles(formData, "privilegios_rol.php");
+          setTimeout(function() {
+              window.location.href = 'pages/usuarios.php';
+          }, 2000);
+
           console.log('no paso, modificamos activo a no');
         }
       }
@@ -1105,6 +1129,39 @@ $('#receptor').on('change', function (e) {
 
 });
 
+function accesoModulos() {
+
+  /*switch (parseInt(receptor)) {
+    case 1:
+
+      addClass();
+      $('#mensaje_estudiante').removeClass('oculto');
+      break;
+    case 2:
+
+      addClass();
+      $('#mensaje_nivel').removeClass('oculto');
+      break;
+    case 3:
+
+      addClass();
+      $('#mensaje_masivo').removeClass('oculto');
+      break;
+    case 4:
+
+      addClass();
+      $('#mensaje_especifico').removeClass('oculto');
+      break;
+    case 5:
+
+      addClass();
+      $('#mensaje_extracurricular').removeClass('oculto');
+      break;
+    default:
+
+  }*/
+}
+
 $('#mas_archivo').on('click', function (e) {
   e.preventDefault();
   
@@ -1113,9 +1170,23 @@ $('#mas_archivo').on('click', function (e) {
   if (grupo_input.length == 5) {
     mensaje('Solo puede subir 5 archivos por mensaje', 'warning');
   }else{
-    let input = '<input type="file" class="form-control archivo_mensaje" aria-describedby="emailHelp" name="archivo" id="archivo" onfocus="focused(this)" onfocusout="defocused(this)">';
+    let input = '<input type="file" class="form-control archivo_mensaje" aria-describedby="emailHelp" name="archivo[]" id="archivo" onfocus="focused(this)" onfocusout="defocused(this)">';
 
     $('.inputs_archivo').append(input);
+  }
+
+});
+
+$('#menos_archivo').on('click', function (e) {
+  e.preventDefault();
+  
+  let grupo_input = $('.archivo_mensaje');
+
+  if (grupo_input.length == 1) {
+    mensaje('Agrega otro', 'warning');
+  }else{
+    const numero_archivos = grupo_input.length - 1;
+    grupo_input[numero_archivos].remove();
   }
 
 });
@@ -1128,11 +1199,24 @@ $('#mas_url').on('click', function (e) {
   if (grupo_input.length == 5) {
     mensaje('Solo puede subir 5 url por mensaje', 'warning');
   }else{
-    let input = '<input type="text" class="form-control w-100 url_mensaje" name="url" id="url" aria-describedby="emailHelp">';
+    let input = '<input type="text" class="form-control w-100 url_mensaje" name="url[]" id="url" aria-describedby="emailHelp">';
 
     $('.inputs_url').append(input);
   }
 
+});
+
+$('#menos_url').on('click', function (e) {
+  e.preventDefault();
+  
+  let grupo_input = $('.url_mensaje');
+
+  if (grupo_input.length == 1) {
+    mensaje('Agrega otro', 'warning');
+  }else{
+    const numero_archivos = grupo_input.length - 1;
+    grupo_input[numero_archivos].remove();
+  }
 });
 
 $( document ).ready(function() {
@@ -1145,13 +1229,14 @@ $( document ).ready(function() {
     consulta('#tabla_tipo_mensajes', '','');
     consulta('#tabla_estudiantes', '','');
     consulta('#tabla_extracurriculares', '','');
-    //consulta('#tabla_mensajes', '','');
     consulta('#tabla_atributo', '','');
     consulta('#tabla_pagos', '','');
     consulta('#tabla_scanner', '','');
     consulta('#tabla_materia', '','');
     consulta('#tabla_asignar_materia', '','');
+    consultaObj('#tabla_mensajes', '','');
     consultaObj('#tabla_rol', '','');
+    consultaObj('#tabla_ciclos', '','');
 
     const sid_instituto = $("#configuracion_escuela").attr('instituto');
     const id_usuario = $("#informacion_perfil").attr('usuario');
@@ -1319,3 +1404,4 @@ $( document ).ready(function() {
 });
 
 
+//mensaje de modificacion

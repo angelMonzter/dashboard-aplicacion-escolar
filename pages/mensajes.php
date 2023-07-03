@@ -329,10 +329,10 @@ include_once('../templates/header.php')
                         <br>
 
                         <div class="row">
-                          <div class="col-11">
+                          <div class="col-10">
                             <label class="mb-0">Adjuntar Archivo</label>
                             <div class="inputs_archivo">
-                              <input type="file" class="form-control archivo_mensaje" aria-describedby="emailHelp" name="archivo" id="archivo" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="file" class="form-control archivo_mensaje" aria-describedby="emailHelp" name="archivo[]" id="archivo" onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                           <div class="col-1">
@@ -340,18 +340,22 @@ include_once('../templates/header.php')
                               <button class="btn bg-gradient-primary mb-0 me-2 mt-2" type="button" id="mas_archivo">
                                 <i class="fa-solid fa-plus"></i>
                               </button>
-                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="mas_url">
+                            </div>
+                          </div>
+                          <div class="col-1">
+                            <div class="mt-3" align="right">
+                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="menos_archivo">
                                 <i class="fa-solid fa-trash-can"></i>
                               </button>
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-11">
+                          <div class="col-10">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">URL</label>
                               <div class="inputs_url" style="width: 100%;">
-                                <input type="text" class="form-control url_mensaje" aria-describedby="emailHelp" name="url" id="url" onfocus="focused(this)" onfocusout="defocused(this)">
+                                <input type="text" class="form-control url_mensaje" aria-describedby="emailHelp" name="url[]" id="url" onfocus="focused(this)" onfocusout="defocused(this)">
                               </div>
                             </div>
                           </div>
@@ -360,7 +364,11 @@ include_once('../templates/header.php')
                               <button class="btn bg-gradient-primary mb-0 me-2 mt-2" type="button" id="mas_url">
                                 <i class="fa-solid fa-plus"></i>
                               </button>
-                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="mas_url">
+                            </div>
+                          </div>
+                          <div class="col-1">
+                            <div class="mt-3" align="right">
+                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="menos_url">
                                 <i class="fa-solid fa-trash-can"></i>
                               </button>
                             </div>
@@ -452,7 +460,7 @@ include_once('../templates/header.php')
                       </tr>
                     </thead>
                     <tbody class="text-center">
-                      
+                      <img src=""  alt="">
                     </tbody>
                     <tfoot>
                       <tr>
@@ -731,3 +739,4 @@ include_once('../templates/header.php')
 </body>
 
 </html>
+

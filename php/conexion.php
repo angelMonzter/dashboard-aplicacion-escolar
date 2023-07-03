@@ -3,7 +3,7 @@
 		private static $host= 'localhost';
 		private static $usuario= 'root';
 		private static $pass= '';
-		protected $base='app_escolar_sergio';
+		protected $base='app_dashboard_escolar';
 		protected $sentencia;
 		private $conexion;
 

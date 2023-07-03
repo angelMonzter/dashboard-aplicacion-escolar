@@ -239,50 +239,21 @@ include_once('../templates/header.php')
             <div class="col-xl-12 mt-3 mb-6">
               <div class="card">
                 <div class="card-body">
-                  <div class="d-flex flex-wrap justify-content-between">
-                    <div>
-                      <h5 class="font-weight-bolder">Como subir un archivo</h5>
-                      <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn bg-i text-white" data-bs-toggle="modal" data-bs-target="#ayuda">
-                        <i class="fa-solid fa-circle-info mx-1"></i>
-                        Requerimientos de archivo
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4 col-12">
-                      <div class="card card-plain text-center">
-                        <div class="card-body">
-                          <button class="btn bg-info shadow text-center text-white">
-                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                          </button>
-                          <p class="text-sm font-weight-normal mb-2"> <b>Paso 1:</b> Subir Archivo</p>
+                  <h5 class="font-weight-bolder">Agregar Ciclo</h5>
+                  <form id="ciclos">
+                    <div class="row align-items-center">
+                      <div class="col-lg-12">
+                        <div class="input-group input-group-dynamic mt-3">
+                          <label class="form-label">Ciclo</label>
+                          <input type="text" class="form-control w-100" aria-describedby="emailHelp" id="nombre_ciclo" name="nombre_ciclo" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                      <div class="card card-plain text-center">
-                        <div class="card-body">
-                          <button class="btn bg-warning shadow text-center text-white">
-                            <i class="fa-solid fa-eye"></i>
-                          </button>
-                          <p class="text-sm font-weight-normal mb-2"> <b>Paso 2:</b> Validar Archivo</p>
-                        </div>
+                      <div class="mt-3" align="right">
+                        <input type="submit" class="btn bg-gradient-success mb-0 me-2" value="Agregar">
+                        <input type="hidden" class="id_modificar" name="id_modificar" value="">
                       </div>
                     </div>
-                    <div class="col-md-4 col-12">
-                      <div class="card card-plain text-center">
-                        <div class="card-body">
-                          <button class="btn bg-success shadow text-center text-white">
-                            <i class="fa-regular fa-floppy-disk"></i>
-                          </button>
-                          <p class="text-sm font-weight-normal mb-2"> <b>Paso 3:</b> Guardar en la Base de Datos</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -291,60 +262,29 @@ include_once('../templates/header.php')
             <div class="col-12 mt-4">
               <div class="card">
                 <div class="card-header">
+
+                  <div class="col-12 mt-2 mb-4">
+                    <div class="mt-3 d-flex justify-content-end">
+                      <button type="button" class="btn btn-info">
+                        Pasar ciclo
+                      </button>
+                    </div>
+                  </div>
+
                   <div class="table-responsive">
-                    <table id="example2" class="table table-striped" style="width:100%">
+                    <table id="tabla_ciclos" data-name="ciclo.php" class="table table-striped" style="width:100%">
                       <thead>
                         <tr>
-                          <th class="text-center">Archivos</th>
-                          <th class="text-center">Fecha de Subida</th>
-                          <th class="text-center">Estado</th>
+                          <th class="text-center">Ciclo</th>
                           <th class="text-center">Acciones</th>
                         </tr>
                       </thead>
                       <tbody class="text-center">
-                        <tr class="text-center">
-                          <td>general-file-1613669186365.xlsx</td>
-                          <td> 2022-08-16 10:54:57</td>
-                          <td>
-                            <span class="badge badge-sm bg-gradient-success">Guardado</span>
-                          </td>
-                          <td>
-                            <a href="#" class="btn text-white bg-secondary" data-bs-toggle="tooltip" data-bs-title="Validar">
-                              <i class="fa-solid fa-eye"></i>
-                            </a>
-                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
-                              <i class="fa-regular fa-floppy-disk"></i>
-                            </a>
-                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
-                              <i class="fa-solid fa-trash"></i>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr class="text-center">
-                          <td>general-file-1613669186365.xlsx</td>
-                          <td> 2022-08-16 10:54:57</td>
-                          <td>
-                            <span class="badge badge-sm bg-gradient-success">Guardado</span>
-                          </td>
-                          <td>
-                            <a href="#" class="btn text-white bg-secondary" data-bs-toggle="tooltip" data-bs-title="Validar">
-                              <i class="fa-solid fa-eye"></i>
-                            </a>
-                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
-                              <i class="fa-regular fa-floppy-disk"></i>
-                            </a>
-                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
-                              <i class="fa-solid fa-trash"></i>
-                            </a>
-                          </td>
-                        </tr>
 
                       </tbody>
                       <tfoot>
                         <tr>
-                          <th class="text-center">Archivos</th>
-                          <th class="text-center">Fecha de Subida</th>
-                          <th class="text-center">Estado</th>
+                          <th class="text-center">Ciclo</th>
                           <th class="text-center">Acciones</th>
                         </tr>
                       </tfoot>

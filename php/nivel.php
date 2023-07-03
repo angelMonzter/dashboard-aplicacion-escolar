@@ -10,15 +10,15 @@
 			return $this->obtener_sentencia();
 		}
 		public function consultar_id($id){
-            $this->sentencia = "SELECT * FROM nivel WHERE id_nivel = $id;";
+            $this->sentencia = "SELECT * FROM nivel WHERE id_nivel = '$id';";
             return $this->obtener_sentencia();
         }
         public function modificar($nombre,$id){
-			$this->sentencia="UPDATE nivel SET nombre = '$nombre' WHERE id_nivel = $id;";
+			$this->sentencia="UPDATE nivel SET nombre = '$nombre' WHERE id_nivel = '$id';";
 			$this->ejecutar_sentencia();
 		}
 		public function eliminar($id){
-            $this->sentencia="DELETE FROM nivel WHERE id_nivel = $id";
+            $this->sentencia="DELETE FROM nivel WHERE id_nivel = '$id'";
 			return $this->ejecutar_sentencia();
 		}
 		public function id($value){

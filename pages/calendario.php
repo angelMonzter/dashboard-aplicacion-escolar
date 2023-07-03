@@ -37,8 +37,7 @@
                   <input type="date" name="fecha_evento" id="fecha_evento" class="form-control">
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="todos_evento" id="todos_evento" value=""
-                    id="fcustomCheck1" checked="">
+                  <input class="form-check-input" type="checkbox" name="todos_evento" id="todos_evento" value="" id="fcustomCheck1" checked="">
                   <label class="custom-control-label" for="customCheck1">Para toda la escuela</label>
                 </div>
                 <div class="input-group input-group-dynamic mt-3">

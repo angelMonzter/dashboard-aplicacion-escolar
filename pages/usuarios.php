@@ -256,6 +256,7 @@ include_once('../templates/header.php')
                           <select name="sid_rol" id="sid_rol" class="form-control" aria-label="Default select example">
                             <option selected>Selecciona una opción</option>
                             <option value="1">Rol </option>
+                            <option value="o58v1">Profesor</option>
                           </select>
                         </div>
                       </div>

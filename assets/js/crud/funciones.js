@@ -56,7 +56,13 @@ export function insertDataFiles(datos, archivo) {
       extraer_datos_form(formulario_modulo);
 
       if (respuesta == "modificacion") {
+        
+        const datos_nuevos = jQuery('[data-id="' + id + '"]').parents()[1].childNodes;
+        
         if (modulo == "instituto") {
+          datos_nuevos[0].innerHTML = datos_formulario[0].value;
+        }
+        if (modulo == "ciclos") {
           datos_nuevos[0].innerHTML = datos_formulario[0].value;
         }
 
@@ -202,6 +208,56 @@ export function insertDataFiles(datos, archivo) {
           </tr>`;
           $('#tabla_rol tbody').append(html);
         }
+        if (modulo == 'mensajes') {
+          $('#tabla_mensajes').DataTable().row.add([
+              `<td>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <div class="form-check is-filled">
+                      <input class="form-check-input" type="checkbox" id="customCheck1">
+                    </div>
+                  </div>
+              </td>`,
+              datos_formulario[0].value,
+              1,
+              2,
+              datos_formulario[2].value,
+              `<td>
+                  <a href="#" class="btn text-white bg-info" data-bs-toggle="tooltip" data-bs-title="URL">
+                    <i class="fa-solid fa-link mx-2"></i>0
+                  </a>
+                </td>
+                <td>
+                  <a href="#" class="btn text-white bg-primary" data-bs-toggle="tooltip" data-bs-title="Adjunto">
+                    <i class="fa-solid fa-paperclip mx-2"></i></i>0
+                  </a>
+                </td>`,
+              'url',
+              datos_formulario[3].value,
+              'si',
+              `<td>
+                <a href="#" class="btn text-white bg-secondary mostrar_detalles" data-id="${id}" data-bs-toggle="tooltip" data-bs-title="Detalles">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="#" class="btn text-white bg-danger eliminar_fila" data-id="${id}" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                  <i class="fa-solid fa-trash text-white"></i>
+                </a>
+              </td>`,
+          ]).draw(false);
+        }
+        if (modulo == "ciclos") {
+          $("#tabla_ciclos").DataTable().row.add([
+            datos_formulario[0].value,
+            `<td>
+              <a href="#" class="btn text-white bg-success editar_fila" data-id="${id}" data-bs-toggle="tooltip" data-bs-title="Guardar">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+              <a href="#" class="btn text-white bg-danger eliminar_fila" data-id="${id}" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                <i class="fa-solid fa-trash"></i>
+              </a>
+            </td>`,
+          ])
+          .draw(false);
+        }
 
         mensaje("Datos agregados", "success");
         resetform(formulario_modulo);
@@ -251,98 +307,14 @@ export function consultaObj(id_tabla, id_modificar, detalles) {
         const numero_filas = id.length;
 
         if (modulo == 'rol') {
-          for (var i = 0; i < numero_filas; i++) {
-            const html = `<tr class="text-center">
-              <td class="ps-1 text-center" colspan="4">
-                <div class="my-auto">
-                  <span class="text-dark d-block text-sm">${fila[i].nombre}</span>
-                </div>
-              </td>
-              <td class="text-center">
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                  <span class="text-dark d-block text-sm">2</span>
-                </div>
-              </td>
-              <td class="text-center">
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Estadisticas" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Usuarios y padres" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Mensajes" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Calendario" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Extracurriculares" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Seguimientos" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Calificaciones" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Materias" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Asistencias" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Cobranza" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Tareas" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center" >
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Configuraciones" activo="no">
-                </div>
-              </td>
-              <td>
-                <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                  <a class="btn text-white bg-success editar_fila" data-id="${id[i]}" data-bs-toggle="tooltip" data-bs-title="Editar">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </a>
-                  <a href="#listar-usuarios-password" class="btn text-white bg-danger eliminar_fila" data-id="${id[i]}" data-bs-toggle="tooltip" data-bs-title="Eliminar">
-                    <i class="fa-solid fa-trash"></i>
-                  </a>
-                </div>
-              </td>
-            </tr>`;
-            $('#tabla_rol tbody').append(html);
-          }
 
-          //let datos = new FormData(); // Crea un objeto FormData con los datos del formulario
-          //datos.append("accion", "consulta");
-          //datos.append("id_modificar", id);
-          //datos.append("detalles", '');
+          let privilegios_obj = [];
+          let datos = new FormData(); // Crea un objeto FormData con los datos del formulario
+          datos.append("accion", "consulta");
+          datos.append("id_modificar", id);
+          datos.append("detalles", '');
 
-          /*$.ajax({
+          $.ajax({
             url: 'http://localhost/dashboard-aplicacion-escolar/php/privilegios_rol.php',// Archivo PHP que procesará la subida
             type: 'POST',
             data: datos,
@@ -350,130 +322,182 @@ export function consultaObj(id_tabla, id_modificar, detalles) {
             contentType: false,
             processData: false,
             success: function(response) {
-              // Procesar la respuesta del servidor
-              let array_check = [];
-              for (var i = 0; i < numero_filas; i++) {
+              for (var i = 0; i < response.length; i++) {
+                privilegios_obj.push(response[i].fila);
                 const html = `<tr class="text-center">
-                    <td class="ps-1 text-center" colspan="4">
-                      <div class="my-auto">
-                        <span class="text-dark d-block text-sm">${fila[i].nombre}</span>
-                      </div>
-                    </td>
-                    <td class="text-center">
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <span class="text-dark d-block text-sm">2</span>
-                      </div>
-                    </td>
-                    <td class="text-center">
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault12" rol-id="${id[i]}" value="Estadisticas" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Usuarios y padres" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Mensajes" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Calendario" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Extracurriculares" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Seguimientos" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Calificaciones" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Materias" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Asistencias" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Cobranza" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Tareas" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Configuraciones" activo="" privilegio-id="">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                        <a class="btn text-white bg-success editar_fila" data-id="${fila[i].id_rol}" data-bs-toggle="tooltip" data-bs-title="Editar">
-                          <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
-                        <a href="#listar-usuarios-password" class="btn text-white bg-danger eliminar_fila" data-id="${fila[i].id_rol}" data-bs-toggle="tooltip" data-bs-title="Eliminar">
-                          <i class="fa-solid fa-trash"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>`;
-                  $('#tabla_rol tbody').append(html);
-                  //console.log(jQuery('[rol-id="' + fila[i].id_rol + '"]'));
-                  //array_check.push(jQuery('[rol-id="' + fila[i].id_rol + '"]'));
-                  array_check.push($('#tabla_rol .form-check-input').attr('rol-id', fila[i].id_rol));
-
+                  <td class="ps-1 text-center" colspan="4">
+                    <div class="my-auto">
+                      <span class="text-dark d-block text-sm">${fila[i].nombre}</span>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <span class="text-dark d-block text-sm">2</span>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault12" rol-id="${id[i]}" value="Estadisticas">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Usuarios y padres">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Mensajes">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Calendario">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Extracurriculares">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Seguimientos">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Calificaciones">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Materias">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Asistencias">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Cobranza">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Tareas">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <input class="form-check-input rol_swtich" type="checkbox" id="flexSwitchCheckDefault13" rol-id="${id[i]}" value="Configuraciones">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
+                      <a class="btn text-white bg-success editar_fila" data-id="${id[i]}" data-bs-toggle="tooltip" data-bs-title="Editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </a>
+                      <a href="#listar-usuarios-password" class="btn text-white bg-danger eliminar_fila" data-id="${id[i]}" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>`;
+                $('#tabla_rol tbody').append(html);
               }
-                  console.log(array_check);
-
-              let array_final = [];
-              for (var j = 0; j < array_check[0].length; j++) {
-                  //array_final.push(array_check[0][j]);
-              }
-
-              for (var m = 0; m < response.length; m++) {
-                for (var j = 0; j < array_check[m].length; j++) {
-                  //array_final.push(array_check[m][j]);
-                  //console.log(array_check[m][j]);
+              let td_privilegio;
+              var arreglo_activo = [];            
+              var arreglo_id_privilegio = [];            
+              var arreglo_id_privilegio_rol = [];            
+              for (var i = 0; i < response.length; i++) {
+                for (var j = 0; j < privilegios_obj[0].length; j++) {
+                  arreglo_activo.push(privilegios_obj[i][j].activo);
+                  arreglo_id_privilegio.push(privilegios_obj[i][j].sid_privilegios);
+                  arreglo_id_privilegio_rol.push(privilegios_obj[i][j].privilegios_rol_id);
                 }
               }
-                //for (var j = 0; j < array_check[m].length; j++) {
-                //console.log(array_check[m][j]);
-                //}
-
-              for (var h = 0; h < array_final.length; h++) {
-               // array_final[h].attributes['activo'].value = response.fila[h].activo
-               // array_final[h].attributes['privilegio-id'].value = response.fila[h].sid_privilegios
+              const numero_switches = $('.rol_swtich').length;
+              for (var i = 0; i < numero_switches; i++) {
+                $('.rol_swtich').eq(i).attr('activo', arreglo_activo[i]);
+                $('.rol_swtich').eq(i).attr('privilegio-id', arreglo_id_privilegio[i]);
+                $('.rol_swtich').eq(i).attr('privilegio-rol-id', arreglo_id_privilegio_rol[i]);
+                if ($('.rol_swtich').eq(i).attr('activo') == 'si') {
+                  //console.log();
+                  $('.rol_swtich').eq(i).attr('checked','');
+                }
               }
             },
             error: function(xhr, status, error) {
               // Manejar el error en caso de fallo en la solicitud
               console.log(xhr.responseText);
             }
-          });*/
+          });
+        }
+        if (modulo == 'mensajes') {
+          for (var i = 0; i < numero_filas; i++) {
+            $('#tabla_mensajes').DataTable().row.add([
+                `<td>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <div class="form-check is-filled">
+                        <input class="form-check-input" type="checkbox" id="customCheck1">
+                      </div>
+                    </div>
+                </td>`,
+                fila[i].sid_tipo,
+                1,
+                fila[i].destinatarios,
+                fila[i].asunto,
+                `<td>
+                    <a href="#" class="btn text-white bg-info" data-bs-toggle="tooltip" data-bs-title="URL">
+                      <i class="fa-solid fa-link mx-2"></i>0
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" class="btn text-white bg-primary" data-bs-toggle="tooltip" data-bs-title="Adjunto">
+                      <i class="fa-solid fa-paperclip mx-2"></i></i>0
+                    </a>
+                  </td>`,
+                'url',
+                fila[i].fecha_envio,
+                'si',
+                `<td>
+                  <a href="#" class="btn text-white bg-secondary mostrar_detalles" data-id="${id}" data-bs-toggle="tooltip" data-bs-title="Detalles">
+                    <i class="fa-solid fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn text-white bg-danger eliminar_fila" data-id="${id}" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                    <i class="fa-solid fa-trash text-white"></i>
+                  </a>
+                </td>`,
+            ]).draw(false);
+          }
+        }
+        if (modulo == "ciclos") {
+          for (var i = 0; i < numero_filas; i++) {
+            $("#tabla_ciclos").DataTable().row.add([
+              fila[i].nombre,
+              `<td>
+                <a href="#" class="btn text-white bg-success editar_fila" data-id="${fila[i].id_ciclo}" data-bs-toggle="tooltip" data-bs-title="Guardar">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <a href="#" class="btn text-white bg-danger eliminar_fila" data-id="${fila[i].id_ciclo}" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                  <i class="fa-solid fa-trash"></i>
+                </a>
+              </td>`,
+            ])
+            .draw(false);
+          } 
         }
       }
       if ( respuesta == "consulta_id" ) {
 
         if (modulo == 'rol') {
             $('#nombre_rol').val(fila[0].nombre);
+        }
+        if (modulo == 'ciclos') {
+            $('#nombre_ciclo').val(fila[0].nombre);
         }
       }
     },
@@ -490,7 +514,7 @@ export function insertData(accion, datos_tabla, archivo) {
       accion: 'insertar',
       data: datos_tabla,
   }
-  console.log(datos);
+
   $.ajax({
     url: 'http://localhost/dashboard-aplicacion-escolar/php/' + archivo, // URL de tu API
     method: 'POST', // Método HTTP a utilizar
@@ -701,7 +725,9 @@ export function insertData(accion, datos_tabla, archivo) {
           }
           if (modulo == 'tipo_mensajes') {
               $('#tabla_tipo_mensajes').DataTable().row.add([
-                `<img src="${datos_formulario[0].value}" class="icono_tabla" alt="">`,
+                  `<td>
+                    <img src="${datos_formulario[0].value}" alt="" width="50px">
+                   </td>`,
                   datos_formulario[1].value,
                   `<td>
                       <a href="#" class="btn text-white bg-success editar_fila" data-id="${id}" data-bs-toggle="tooltip" data-bs-title="Editar">
@@ -975,7 +1001,8 @@ export function eliminarObj(id_eliminar, archivo) {
               success: function(response) {
                 // Se ejecuta cuando la petición se completa exitosamente
                 console.log(response);
-                jQuery('[data-id="' + response.id + '"]').parents()[2].remove();
+                jQuery('[data-id="' + response.id + '"]').parents()[1].remove()
+                //jQuery('[data-id="' + response.id + '"]').parents()[2].remove();
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 // Se ejecuta cuando hay un error en la petición
@@ -989,6 +1016,15 @@ export function eliminarObj(id_eliminar, archivo) {
 }
 
 export function eliminar(id_eliminar, archivo) {
+
+    const datos_tabla = {
+        id: id_eliminar
+    };
+
+    const datos = {
+        accion: 'eliminar',
+        data: datos_tabla,
+    }
 
     if (!archivo) {
         //notificacion
@@ -1027,7 +1063,6 @@ export function eliminar(id_eliminar, archivo) {
 }
 
 export function consulta(id_tabla, id_modificar, detalles) {
-
     //const tabla = $(id_tabla);
     const archivo = $(id_tabla).attr('data-name');
     let datos;
@@ -1202,12 +1237,10 @@ export function consulta(id_tabla, id_modificar, detalles) {
             }
             if (modulo == 'grados') {
                 //grados
-
-                console.log(fila);
                 for (var i = 0; i < numero_filas; i++) {
                     $('#tabla_grados').DataTable().row.add([
+                        fila[i].sid_nivel,
                         fila[i].nombre,
-                        fila[i].id_grado,
                         `<td>
                             <a class="btn text-white bg-success editar_fila" data-id="${fila[i].id_grado}" data-bs-toggle="tooltip" data-bs-title="Editar">
                               <i class="fa-solid fa-pen-to-square"></i>
@@ -1258,7 +1291,9 @@ export function consulta(id_tabla, id_modificar, detalles) {
                 //console.log(fila);
                 for (var i = 0; i < numero_filas; i++) {
                     $('#tabla_tipo_mensajes').DataTable().row.add([
-                        `<img src="${fila[i].icono}" class="icono_tabla" alt="">`,
+                        `<td>
+                          <img src="${fila[i].icono}" alt="" width="50px">
+                        </td>`,
                         fila[i].nombre,
                         `<td>
                             <a href="#" class="btn text-white bg-success editar_fila" data-id="${fila[i].id_tipo_mensaje}" data-bs-toggle="tooltip" data-bs-title="Editar">
@@ -1471,7 +1506,7 @@ export function consulta(id_tabla, id_modificar, detalles) {
               }
             }
             if (modulo == 'seguimiento') {
-              // console.log(fila);
+              console.log(numero_filas);
               for (var i = 0; i < numero_filas; i++) {
                 $('#tabla_seguimientos').DataTable().row.add([
                   `<td class="sorting_1">
@@ -1482,7 +1517,7 @@ export function consulta(id_tabla, id_modificar, detalles) {
                             </div>
                         </td>`,
                   fila[i].nombre + ' ' + fila[i].apellido,
-                  fila[i].nombre_padre + ' ',
+                  fila[i].padre + ' ' + fila[i].app_padre,
                   fila[i].estudiante + ' ' + fila[i].app_alumno,
                   fila[i].fecha_envio,
                   ` <td>
@@ -1605,7 +1640,7 @@ export function consulta(id_tabla, id_modificar, detalles) {
                                       <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Descripción:</strong> &nbsp; ${fila[0].descripcion}</li>
                                       <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Fecha de inicio de licencia:</strong> &nbsp; ${fila[0].fecha_inicio_licencia}</li>
                                       <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Datos bancarios:</strong> &nbsp; ${fila[0].banco}</li>
-                                      <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Políticas de privacidad:</strong> &nbsp; <a style="text-decoration: underline;" href="http://localhost/dashboard-app-escolar-admin/archivos/${fila[0].politicas}">${fila[0].politicas}</a></li>
+                                      <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Políticas de privacidad:</strong> &nbsp; <a style="text-decoration: underline;" href="http://localhost/dashboard-aplicacion-escolar-admin/archivos/${fila[0].politicas}">${fila[0].politicas}</a></li>
                                     </ul>`;
 
             $('#configuracion_escuela').html(detalles_extra);
@@ -1667,8 +1702,10 @@ export function consulta(id_tabla, id_modificar, detalles) {
                 console.log(xhr.responseText);
               }
             });
+            document.getElementById("sid_alumno").value = fila[0].sid_alumno;
           }
           if (modulo == 'extracurriculares') {
+            console.log(id);
             const detalles_extra = `<h6 class="mb-3 fs-5">${fila[0].nombre}</h6>
                                     <span class="mb-2 text-sm">N° Estudiantes: <span class="text-dark font-weight-bold ms-sm-2">2</span></span>`;
             $('.extracurricular_detalle').html(detalles_extra);

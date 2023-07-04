@@ -11,13 +11,11 @@ class Seguimiento extends DBA
 	}
 	public function consulta()
 	{
-		$this->sentencia = "SELECT DATE_FORMAT(fecha_registro, '%Y-%m') AS fecha_mes, sid_alumno, COUNT(*) AS total, seguimiento.id_seguimiento AS id_seguimiento, usuario.nombre AS nombre, usuario.apellido AS apellido, padre.nombre AS nombre_padre,  padre.apellido AS apellido_padre, alumno.nombre AS estudiante, alumno.apellido AS app_alumno, seguimiento.fecha_registro AS fecha_envio FROM `seguimiento` INNER JOIN alumno on alumno.id_alumno=seguimiento.sid_alumno INNER JOIN atributo ON atributo.id_atributo = seguimiento.sid_atributo INNER JOIN padre ON padre.id_padre = alumno.sid_padre INNER JOIN usuario ON usuario.id_usuario=atributo.sid_usuario GROUP BY DATE_FORMAT(seguimiento.fecha_registro, '%Y-%m'), seguimiento.sid_alumno";
 		return $this->obtener_sentencia();
 
 	}
 	public function consultar_id($id)
 	{
-		$this->sentencia = "SELECT seguimiento.id_seguimiento AS id_seguimiento, seguimiento.sid_alumno AS sid_alumno, seguimiento.sid_atributo AS sid_atributo, seguimiento.nombre_evaluacion AS nombre_evaluacion, seguimiento.fecha_registro AS fecha_registro, usuario.nombre AS nombre, usuario.apellido AS apellido, padre.nombre AS nombre_padre, padre.apellido AS apellido_padre, alumno.nombre AS estudiante, alumno.apellido AS app_alumno, seguimiento.fecha_registro AS fecha_envio FROM `seguimiento` INNER JOIN alumno on alumno.id_alumno=seguimiento.sid_alumno INNER JOIN atributo ON atributo.id_atributo = seguimiento.sid_atributo INNER JOIN padre ON padre.id_padre = alumno.sid_padre INNER JOIN usuario ON usuario.id_usuario=atributo.sid_usuario WHERE id_seguimiento = '$id';";
 		return $this->obtener_sentencia();
 	}
 	public function modificar($sid_alumno, $sid_atributo, $nombre_evaluacion, $fecha_registro, $id_seguimiento)

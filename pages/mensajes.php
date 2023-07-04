@@ -183,6 +183,7 @@ include_once('../templates/header.php')
                           <label class="input-group">Tipo de Mensaje</label>
                           <select name="sid_tipo" id="sid_tipo" class="form-control" aria-label="Default select example">
                             <option selected value="0">Selecciona una opción</option>
+                            <option value="1">opt1 </option>
                           </select>
                         </div>
 
@@ -191,6 +192,7 @@ include_once('../templates/header.php')
                             <label class="input-group">Estudiante</label>
                             <select name="sid_estudiante" id="sid_estudiante" class="form-control" aria-label="Default select example">
                               <option selected value="0">Selecciona una opción</option>
+                              <option value="1">opt1 </option>
                             </select>
                           </div>
                         </div>
@@ -202,6 +204,7 @@ include_once('../templates/header.php')
                                 <label class="input-group">Nivel</label>
                                 <select name="sid_nivel" id="sid_nivel" class="form-control" aria-label="Default select example">
                                   <option selected value="0">Selecciona una opción</option>
+                                  <option value="1">opt1 </option>
                                 </select>
                               </div>
                             </div>
@@ -210,6 +213,7 @@ include_once('../templates/header.php')
                                 <label class="input-group">Grado</label>
                                 <select name="sid_grado" id="sid_grado" class="form-control" aria-label="Default select example">
                                   <option selected value="0">Selecciona una opción</option>
+                                  <option value="1">opt1 </option>
                                 </select>
                               </div>
                             </div>
@@ -218,6 +222,7 @@ include_once('../templates/header.php')
                                 <label class="input-group">Grupo</label>
                                 <select name="sid_grupo" id="sid_grupo" class="form-control" aria-label="Default select example">
                                   <option selected value="0">Selecciona una opción</option>
+                                  <option value="1">opt1 </option>
                                 </select>
                               </div>
                             </div>
@@ -248,6 +253,7 @@ include_once('../templates/header.php')
                             <label class="input-group">Grupo extracurricular</label>
                             <select name="sid_extracurricular" id="sid_extracurricular" class="form-control" aria-label="Default select example">
                               <option selected value="0">Selecciona una opción</option>
+                              <option value="1">opt1 </option>
                             </select>
                           </div>
                         </div>
@@ -308,10 +314,7 @@ include_once('../templates/header.php')
                               <label class="input-group">Periodo</label>
                               <select name="periodo_mensaje" id="periodo_mensaje" class="form-control" aria-label="Default select example">
                                 <option selected>Selecciona una opción</option>
-                                <option value="Diario">Diario</option>
-                                <option value="Semanalmente">Semanalmente</option>
-                                <option value="Mensual">Mensual</option>
-                                <option value="Anual">Anual</option>
+                                <option value="1">1</option>
                               </select>
                             </div>
                           </div>
@@ -326,10 +329,10 @@ include_once('../templates/header.php')
                         <br>
 
                         <div class="row">
-                          <div class="col-11">
+                          <div class="col-10">
                             <label class="mb-0">Adjuntar Archivo</label>
                             <div class="inputs_archivo">
-                              <input type="file" class="form-control archivo_mensaje" aria-describedby="emailHelp" name="archivo" id="archivo" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="file" class="form-control archivo_mensaje" aria-describedby="emailHelp" name="archivo[]" id="archivo" onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                           <div class="col-1">
@@ -337,18 +340,22 @@ include_once('../templates/header.php')
                               <button class="btn bg-gradient-primary mb-0 me-2 mt-2" type="button" id="mas_archivo">
                                 <i class="fa-solid fa-plus"></i>
                               </button>
-                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="mas_url">
+                            </div>
+                          </div>
+                          <div class="col-1">
+                            <div class="mt-3" align="right">
+                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="menos_archivo">
                                 <i class="fa-solid fa-trash-can"></i>
                               </button>
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-11">
+                          <div class="col-10">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">URL</label>
                               <div class="inputs_url" style="width: 100%;">
-                                <input type="text" class="form-control url_mensaje" aria-describedby="emailHelp" name="url" id="url" onfocus="focused(this)" onfocusout="defocused(this)">
+                                <input type="text" class="form-control url_mensaje" aria-describedby="emailHelp" name="url[]" id="url" onfocus="focused(this)" onfocusout="defocused(this)">
                               </div>
                             </div>
                           </div>
@@ -357,7 +364,11 @@ include_once('../templates/header.php')
                               <button class="btn bg-gradient-primary mb-0 me-2 mt-2" type="button" id="mas_url">
                                 <i class="fa-solid fa-plus"></i>
                               </button>
-                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="mas_url">
+                            </div>
+                          </div>
+                          <div class="col-1">
+                            <div class="mt-3" align="right">
+                              <button class="btn bg-gradient-danger mb-0 me-2 mt-2" type="button" id="menos_url">
                                 <i class="fa-solid fa-trash-can"></i>
                               </button>
                             </div>
@@ -396,27 +407,27 @@ include_once('../templates/header.php')
                           <label class="input-group">Sticker</label>
                           <select name="sticker_tipo_mensaje" id="sticker_tipo_mensaje" class="form-control" aria-label="Default select example" style="width: 200px; border-color: transparent;">
                             <option selected>Selecciona una opción</option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/001.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/002.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/002.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/003.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/003.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/004.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/004.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/005.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/005.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/006.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/006.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/007.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/007.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/008.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/008.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/009.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/009.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/010.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/010.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/011.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/011.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/012.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/012.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/013.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/013.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/014.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/014.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/015.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/015.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/016.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/016.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/017.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/017.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/018.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/018.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/019.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/019.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/020.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/020.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/021.svg" value="http://localhost/dashboard-aplicacion-escolar/assets/img/Tipo mensaje/021.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/001.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/001.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/002.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/002.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/003.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/003.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/004.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/004.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/005.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/005.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/006.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/006.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/007.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/007.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/008.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/008.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/009.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/009.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/010.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/010.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/011.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/011.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/012.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/012.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/013.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/013.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/014.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/014.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/015.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/015.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/016.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/016.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/017.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/017.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/018.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/018.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/019.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/019.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/020.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/020.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/021.svg" value="http://localhost/dashboard-app-escolar/assets/img/Tipo mensaje/021.svg"></option>
                           </select>
                         </div>
                       </div>
@@ -449,7 +460,7 @@ include_once('../templates/header.php')
                       </tr>
                     </thead>
                     <tbody class="text-center">
-                      
+                      <img src=""  alt="">
                     </tbody>
                     <tfoot>
                       <tr>
@@ -728,3 +739,4 @@ include_once('../templates/header.php')
 </body>
 
 </html>
+

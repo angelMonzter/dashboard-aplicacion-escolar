@@ -1,10 +1,18 @@
 <?php 
 	require("conexion.php");
 	class Mensaje extends DBA{
-		public function alta($id_mensaje,$receptor,$sid_tipo,$sid_alumno,$sid_nivel,$sid_grado,$sid_grupo,$sid_extracurricular,$destinatarios,$asunto,$mensaje,$respuesta_rapida,$mensaje_programado,$fecha_envio,$hora_envio,$repetir,$periodo,$fecha_fin) {
-			$this->sentencia = "INSERT INTO mensaje VALUES ('$id_mensaje','$receptor','$sid_tipo','$sid_alumno','$sid_nivel','$sid_grado','$sid_grupo','$sid_extracurricular','$destinatarios','$asunto','$mensaje','$respuesta_rapida','$mensaje_programado','$fecha_envio','$hora_envio','$repetir','$periodo','$fecha_fin');";
+		public function alta($id_mensaje,$receptor,$sid_tipo,$sid_alumno,$sid_nivel,$sid_grado,$sid_grupo,$sid_extracurricular,$destinatarios,$asunto,$mensaje,$respuesta_rapida,$mensaje_programado,$fecha_envio,$hora_envio,$repetir,$periodo,$fecha_fin,$sid_instituto) {
+			$this->sentencia = "INSERT INTO mensaje VALUES ('$id_mensaje','$receptor','$sid_tipo','$sid_alumno','$sid_nivel','$sid_grado','$sid_grupo','$sid_extracurricular','$destinatarios','$asunto','$mensaje','$respuesta_rapida','$mensaje_programado','$fecha_envio','$hora_envio','$repetir','$periodo','$fecha_fin','$sid_instituto');";
 			return $this->ejecutar_sentencia();
 		}
+        public function alta_url($id_url,$sid_mensaje,$url) {
+            $this->sentencia = "INSERT INTO url_mensaje VALUES ('$id_url','$sid_mensaje','$url');";
+            return $this->ejecutar_sentencia();
+        }
+        public function alta_archivo($id_archivo_mensaje,$sid_mensaje,$url) {
+            $this->sentencia = "INSERT INTO archivo_mensaje VALUES ('$id_archivo_mensaje','$sid_mensaje','$url');";
+            return $this->ejecutar_sentencia();
+        }
 		public function consulta() {
 			$this->sentencia = "SELECT * FROM mensaje;";
 			return $this->obtener_sentencia();
@@ -30,22 +38,22 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Recuperar los datos enviados en la solicitud
-        $data = json_decode(file_get_contents("php://input"), true);
+        //$data = json_decode(file_get_contents("php://input"), true);
 
         // Validar los datos recibidos
-        if ( !isset($data['accion']) || !isset($data['data']) ) {
+        /*if ( !isset($data['accion']) || !isset($data['data']) ) {
             header('HTTP/1.1 400 Bad Request');
             echo 'Error: Campos obligatorios';
             exit;
-        }
+        }*/
         
-        $datos_tabla = $data['data'];
+        //$datos_tabla = $data['data'];
 
         $obj = new Mensaje();
         
         if ($_POST['accion'] === 'insertar') {
 
-            $id = $_POST['id'];
+            $id = $_POST['id_modificar'];
 
             $receptor = $_POST['receptor'];
             $sid_tipo = $_POST['sid_tipo'];
@@ -57,7 +65,7 @@
             $sid_extracurricular = $_POST['sid_extracurricular'];
 
             $asunto = $_POST['asunto_mensaje'];
-            $mensaje = $_POST['mensaje'];;
+            $mensaje = $_POST['mensaje'];
 
             $respuesta_rapida = $_POST['respuesta_rapida_mensaje'];
             $mensaje_programado = $_POST['programado_mensaje'];
@@ -71,27 +79,75 @@
             $periodo = $_POST['periodo_mensaje'];
             $fecha_fin = $_POST['fecha_fin_mensaje'];
 
-            //falta mandar el mensaje, los adjuntos y sigueintes campos
-            //$mensaje = $datos_tabla['textarea_mensaje'];
-            //$archivo_adjunto = 'archivo_adjunto';
-            //$url = 'url';
+            $archivo_adjunto = $_FILES['archivo'];
+            $archivo_adjunto_numero = count($_FILES['archivo']["name"]);
 
-            $sid_extracurricular = 1;
+            session_start();
+            $sid_instituto = $_SESSION['sid_instituto'];
+
+            for ($i=0; $i < $archivo_adjunto_numero; $i++) { 
+
+                $directorio = "../archivos/";
+                $archivo = $directorio . basename($archivo_adjunto["name"][$i]);
+                $archivo_subido = 1;
+                $tipo_archivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+
+                $imagen = getimagesize($archivo_adjunto["tmp_name"][$i]);
+                
+                if (isset($logo)) {
+                    if ($imagen !== false) {
+                        $archivo_subido = 1;
+                    } else {
+                        $archivo_subido = 0;
+                    }
+                }
+
+                // Verificar si $archivo_subido es 0 debido a un error
+                if ($archivo_subido == 0) {
+                    $respuesta = array(
+                        'respuesta' => 'El archivo no se pudo subir',
+                    );
+                // Si todo está bien, intentar subir el archivo
+                } else {
+                    if (move_uploaded_file($archivo_adjunto["tmp_name"][$i], $archivo)) {
+                        $nombre_archivo[] = htmlspecialchars( basename( $archivo_adjunto["name"][$i]) );
+                    } else {
+                        $respuesta = array(
+                            'respuesta' => 'Hubo un error al subir el archivo',
+                        );
+                    }
+                }
+            }
+            
+            $url = $_POST['url'];
 
             if (empty($id)) {
 
                 $id = $obj->id(5);
 
-                $resultado = $obj->alta($id,$receptor,$sid_tipo,$sid_alumno,$sid_nivel,$sid_grado,$sid_grupo,$sid_extracurricular,$destinatarios,$asunto,$mensaje,$respuesta_rapida,$mensaje_programado,$fecha_envio,$hora_envio,$repetir,$periodo,$fecha_fin);
+                $resultado = $obj->alta($id,$receptor,$sid_tipo,$sid_estudiante,$sid_nivel,$sid_grado,$sid_grupo,$sid_extracurricular,$destinatario,$asunto,$mensaje,$respuesta_rapida,$mensaje_programado,$fecha_envio,$hora_envio,$repetir,$periodo,$fecha_fin,$sid_instituto);
+
+                for ($i=0; $i < count($url); $i++) { 
+                    $id_url[$i] = $obj->id(5);
+                    $resultado_url = $obj->alta_url($id_url[$i], $id, $url[$i]);
+                }
+
+                for ($i=0; $i < count($nombre_archivo); $i++) { 
+                    $id_archivo_mensaje[$i] = $obj->id(5);
+                    $resultado_archivo = $obj->alta_archivo($id_archivo_mensaje[$i], $id, $nombre_archivo[$i]);
+                }
 
                 $respuesta = array(
                     'respuesta' => 'alta',
+                    'id' => $id,
                     'resultado' => $resultado,
                     'modulo' => 'mensajes',
+                    'url' => $url,
+                    'nombre_archivo' => $nombre_archivo,
                 );
             }else{
 
-                $resultado = $obj->modificar($nombre, $id);
+                //$resultado = $obj->modificar($nombre, $id);
 
                 $respuesta = array(
                     'respuesta' => 'modificacion',
@@ -101,8 +157,8 @@
                 );
             }
         }
-        /*
         require("funciones.php");
+        /*
 
         $id = $datos_tabla['id']; 
         
@@ -121,7 +177,21 @@
             
             $respuesta = eliminarRegistrosMultiples($obj, $filas, 'mensajes');
         }
+
         */
+        if ($_POST['accion'] === 'consulta') {
+        
+            $id = $_POST['id_modificar']; 
+            $detalles = $_POST['detalles'];
+
+            if (empty($detalles)) {
+                $respuesta = consultarFilas($id, $obj, 'id_mensaje', 'mensajes', '');
+            }else{
+                $respuesta = consultarFilas($id, $obj, 'id_mensaje', 'mensajes', 'detalles');
+            }
+
+        }
+
         // Devolver el libro recién creado como objeto JSON
         header('Content-Type: application/json');
         echo json_encode($respuesta);

@@ -90,78 +90,78 @@ include_once('../templates/header.php')
                           <select name="icono" id="icono" class="form-control" aria-label="Default select example"
                             style="width: 200px; border-color: transparent;">
                             <option>Selecciona una opción</option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/001.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/001.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/002.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/002.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/003.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/003.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/004.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/004.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/005.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/005.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/006.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/006.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/007.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/007.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/008.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/008.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/009.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/009.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/010.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/010.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/011.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/011.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/012.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/012.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/013.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/013.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/014.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/014.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/015.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/015.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/016.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/016.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/017.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/017.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/018.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/018.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/019.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/019.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/020.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/020.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/021.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/021.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/022.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/022.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/023.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/023.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/024.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/024.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/025.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/025.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/026.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/026.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/027.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/027.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/028.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/028.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/029.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/029.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/030.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/030.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/031.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/031.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/032.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/032.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/033.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/033.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/034.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/034.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/035.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/035.svg"></option>
-                            <option data-img_src="http://localhost/dashboard-app-escolar/assets/img/sticker/036.svg"
-                              value="http://localhost/dashboard-app-escolar/assets/img/sticker/036.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/001.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/001.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/002.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/002.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/003.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/003.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/004.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/004.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/005.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/005.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/006.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/006.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/007.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/007.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/008.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/008.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/009.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/009.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/010.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/010.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/011.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/011.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/012.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/012.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/013.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/013.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/014.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/014.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/015.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/015.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/016.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/016.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/017.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/017.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/018.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/018.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/019.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/019.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/020.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/020.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/021.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/021.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/022.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/022.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/023.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/023.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/024.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/024.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/025.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/025.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/026.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/026.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/027.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/027.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/028.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/028.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/029.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/029.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/030.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/030.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/031.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/031.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/032.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/032.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/033.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/033.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/034.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/034.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/035.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/035.svg"></option>
+                            <option data-img_src="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/036.svg"
+                              value="http://localhost/dashboard-aplicacion-escolar/assets/img/sticker/036.svg"></option>
 
                           </select>
                         </div>
@@ -435,13 +435,13 @@ include_once('../templates/header.php')
                   </div>
 
                   <div class="row">
-                    <form id="seguimiento">
+                    <form id="asignar_atributo">
                       <h6 class="mb-0 fs-4">Detalles del Seguimiento</h6>
                       <div class="form-group d-flex">
                         <div class="col-6 px-2 my-4">
                           <div class="input-group input-group-dynamic mt-3">
                             <label class="input-group">Atributo</label>
-                            <select name="seguimiento_atributo" id="seguimiento_atributo" class="form-control"
+                            <select name="asignar_atributo_seguimiento" id="asignar_atributo_seguimiento" class="form-control"
                               aria-label="Default select example">
                               <option selected>Selecciona una opción</option>
                             </select>
@@ -450,15 +450,17 @@ include_once('../templates/header.php')
                         <div class="col-6 px-2 my-4">
                           <div class="input-group input-group-dynamic mt-3">
                             <label class="input-group">Nombre</label>
-                            <input type="text" class="form-control" name="seguimiento_nombre" id="seguimiento_nombre"  aria-describedby="emailHelp" onfocus="focused(this)"
+                            <input type="text" class="form-control" name="asignar_nombre_atributo" id="asignar_nombre_atributo"  aria-describedby="emailHelp" onfocus="focused(this)"
                               onfocusout="defocused(this)">
                           </div>
                         </div>
                       </div>
                       <div class="col-12 text-end mb-4">
                         <a href="#" class="btn bg-gradient-success mb-0 me-2" id="guardar_seguimiento">Agregar</a>
-                        <input type="hidden" class="" name="sid_alumno" id="sid_alumno" value="">
-                        <input type="hidden" class="id_modificar" name="id_modificar" value="">
+                        <input type="hidden" class="" name="sid_alumno_atributo" id="sid_alumno_atributo" value="">
+                        <input type="hidden" class="id_modificar_atributo" id="id_modificar_atributo" name="id_modificar_atributo" value="">
+                        <input type="hidden" class="fecha_atributo_seguimiento" id="fecha_atributo_seguimiento" name="fecha_atributo_seguimiento" value="">
+                        <input type="hidden" class="usuario_atributo_seguimiento" id="usuario_atributo_seguimiento" name="usuario_atributo_seguimiento" value="">
                       </div>
 
 
@@ -476,7 +478,7 @@ include_once('../templates/header.php')
                   <!-- Table -->
                   <div class="row">
                     <div class="table-responsive">
-                      <table id="tabla_segui_atributo" data-name="" class="table table-striped" style="width:100%">
+                      <table id="tabla_asignar_atributo" data-name="asignar_atributo.php" class="table table-striped" style="width:100%">
                         <thead>
                           <tr>
                             <th class="text-center">Nombre</th>

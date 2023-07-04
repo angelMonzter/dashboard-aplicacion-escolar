@@ -61,8 +61,7 @@
             $sid_rol = $datos_tabla['sid_rol'];
             $creacion = date("Y-m-d H:i:s");
             $modificacion = date("Y-m-d H:i:s");
-            session_start();
-            $sid_instituto = $_SESSION['sid_instituto'];
+            $sid_instituto = $datos_tabla['sid_instituto'];
 
             // Generar el hash de la contraseña
             $password = $datos_tabla['contrasena'];
@@ -164,6 +163,7 @@
                 );
             }
         }
+
 
         require("funciones.php");
         

@@ -37,7 +37,8 @@
                   <input type="date" name="fecha_evento" id="fecha_evento" class="form-control">
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="todos_evento" id="todos_evento" value="" id="fcustomCheck1" checked="">
+                  <input class="form-check-input" type="checkbox" name="todos_evento" id="todos_evento" value=""
+                    id="fcustomCheck1" checked="">
                   <label class="custom-control-label" for="customCheck1">Para toda la escuela</label>
                 </div>
                 <div class="input-group input-group-dynamic mt-3">
@@ -45,32 +46,18 @@
                   <select name="nivel_evento" id="nivel_evento" class="form-control"
                     aria-label="Default select example">
                     <option selected>Selecciona una opción</option>
-                    <option value="Primaria">Primaria</option>
-                    <option value="Secundaria">Secundaria</option>
-                    <option value="Prepa">Prepa</option>
-
                   </select>
                 </div>
                 <div class="input-group input-group-dynamic mt-3">
                   <label class="input-group">Grado</label>
-                  <select name="grado_evento" id="grado_evento" class="form-control"
-                    aria-label="Default select example">
+                  <select name="grado_evento" id="grado_evento" class="form-control" aria-label="Default select example">
                     <option selected>Selecciona una opción</option>
-                    <option value="1">1°</option>
-                    <option value="2">2°</option>
-                    <option value="3">3°</option>
-
                   </select>
                 </div>
                 <div class="input-group input-group-dynamic mt-3">
                   <label class="input-group">Grupo</label>
-                  <select name="grupo_evento" id="grupo_evento" class="form-control"
-                    aria-label="Default select example">
+                  <select name="grupo_evento" id="grupo_evento" class="form-control" aria-label="Default select example">
                     <option selected>Selecciona una opción</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-
                   </select>
                 </div>
                 <div class="mt-3" align="right">

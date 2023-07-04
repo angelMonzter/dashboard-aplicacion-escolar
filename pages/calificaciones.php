@@ -99,7 +99,7 @@ include_once('../templates/header.php')
                         <td>KINDER 1</td>
                         <td>A</td>
                         <td>
-                          <a href="#" class="btn text-white bg-info" data-bs-toggle="tooltip" data-bs-title="Generar reporte">
+                          <a href="http://localhost/dashboard-aplicacion-escolar/php/pdf/ejemplo_pdf.php" class="btn text-white bg-info" data-bs-toggle="tooltip" data-bs-title="Generar reporte">
                             <i class="fa-regular fa-file"></i>
                           </a>
                           <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
@@ -121,7 +121,7 @@ include_once('../templates/header.php')
                         <td>KINDER 1</td>
                         <td>A</td>
                         <td>
-                          <a href="#" class="btn text-white bg-info" data-bs-toggle="tooltip" data-bs-title="Generar reporte">
+                          <a href="http://localhost/dashboard-aplicacion-escolar/php/pdf/ejemplo_pdf.php" class="btn text-white bg-info" data-bs-toggle="tooltip" data-bs-title="Generar reporte">
                             <i class="fa-regular fa-file"></i>
                           </a>
                           <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">

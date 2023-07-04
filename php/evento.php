@@ -3,7 +3,7 @@
 require("conexion.php");
 class Evento extends DBA{
 	public function alta($id_evento,$nombre,$fecha,$todos,$nivel,$grado,$grupo,$sid_instituto) {
-		$this->sentencia = "INSERT INTO evento VALUES ('$id_evento','$nombre','$fecha','$todos','$nivel','$grado','$grupo','$sid_instituto');";
+		$this->sentencia = "INSERT INTO evento VALUES ($id_evento,'$nombre','$fecha','$todos','$nivel','$grado','$grupo','$sid_instituto');";
 		$this->ejecutar_sentencia();
 	}
 	public function consulta() {
@@ -51,12 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 		$nombre_evento = $datos_tabla['nombre_evento'];
 		$fecha_evento = $datos_tabla['fecha_evento'];
-		$todo = $datos_tabla['todos'];
+		$todo = '1';
 		$nivel_evento = $datos_tabla['nivel_evento'];
 		$grado_evento = $datos_tabla['grado_evento'];
-		$grupo_evento = $datos_tabla['grupo_evento'];
-		session_start();
-		$sid_institucion = $_SESSION['sid_instituto'];
+		$grupo_evento=$datos_tabla['grupo_evento'];
+		$sid_institucion='2';
 
 		if (empty($id)) {
 			$id = $obj->id(5);

@@ -1,7 +1,7 @@
 <?php
 $datatable = true;
 include_once('../templates/header.php')
-?>
+  ?>
 
 <body class="g-sidenav-show  bg-gray-200">
   <!-- ASIDE / MENU IZQUIERDO  -->
@@ -27,36 +27,43 @@ include_once('../templates/header.php')
 
                 <ul class="nav nav-pills nav-fill p-1" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#option1" role="tab" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#option1" role="tab"
+                      aria-selected="false">
                       Cargar Bases de Datos
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option2" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option2"
+                      aria-selected="false">
                       Listar Usuarios
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option3" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option3"
+                      aria-selected="false">
                       Listar Roles
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option4" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option4"
+                      aria-selected="false">
                       Listar Padres
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option5" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option5"
+                      aria-selected="false">
                       Listar Estudiantes
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option6" aria-selected="false">
+                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" href="#option6"
+                      aria-selected="false">
                       Cargar Fotografías
                     </a>
                   </li>
-                  <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
+                  <div class="moving-tab position-absolute nav-link"
+                    style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 137px;">
                     <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">➡</a>
                   </div>
                 </ul>
@@ -85,7 +92,8 @@ include_once('../templates/header.php')
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
                     <div class="col-12 col-sm-2">
-                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal" data-bs-target="#archivoModal">
+                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal"
+                        data-bs-target="#archivoModal">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
                       </button>
@@ -160,13 +168,16 @@ include_once('../templates/header.php')
                             <span class="badge badge-sm bg-gradient-success">Guardado</span>
                           </td>
                           <td>
-                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="Validar">
+                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip"
+                              data-bs-title="Validar">
                               <i class="fa-regular fa-square-check"></i>
                             </a>
-                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
+                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip"
+                              data-bs-title="Guardar">
                               <i class="fa-regular fa-floppy-disk"></i>
                             </a>
-                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip"
+                              data-bs-title="Eliminar">
                               <i class="fa-solid fa-trash"></i>
                             </a>
                           </td>
@@ -178,13 +189,16 @@ include_once('../templates/header.php')
                             <span class="badge badge-sm bg-gradient-success">Guardado</span>
                           </td>
                           <td>
-                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="Validar">
+                            <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip"
+                              data-bs-title="Validar">
                               <i class="fa-regular fa-square-check"></i>
                             </a>
-                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
+                            <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip"
+                              data-bs-title="Guardar">
                               <i class="fa-regular fa-floppy-disk"></i>
                             </a>
-                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                            <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip"
+                              data-bs-title="Eliminar">
                               <i class="fa-solid fa-trash"></i>
                             </a>
                           </td>
@@ -223,31 +237,36 @@ include_once('../templates/header.php')
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Nombre</label>
-                          <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="emailHelp"
+                            onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Apellido</label>
-                          <input type="text" class="form-control" name="apellido" id="apellido" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control" name="apellido" id="apellido"
+                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic my-3">
                           <label class="input-group">Email</label>
-                          <input type="text" class="form-control" name="correo" id="correo" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control" name="correo" id="correo" aria-describedby="emailHelp"
+                            onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Password</label>
-                          <input type="password" class="form-control" name="contrasena" id="contrasena" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="password" class="form-control" name="contrasena" id="contrasena"
+                            aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="input-group">Confirmar Password</label>
-                          <input type="password" class="form-control" id="" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="password" class="form-control" id="" aria-describedby="emailHelp"
+                            onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-4">
@@ -255,8 +274,6 @@ include_once('../templates/header.php')
                           <label class="input-group">Rol</label>
                           <select name="sid_rol" id="sid_rol" class="form-control" aria-label="Default select example">
                             <option selected>Selecciona una opción</option>
-                            <option value="1">Rol </option>
-                            <option value="o58v1">Profesor</option>
                           </select>
                         </div>
                       </div>
@@ -280,7 +297,8 @@ include_once('../templates/header.php')
                 <div class="card-header">
 
                   <div class="table-responsive">
-                    <table id="tabla_usuarios" data-name="usuario.php" class="table table-striped display" style="width:100%">
+                    <table id="tabla_usuarios" data-name="usuario.php" class="table table-striped display"
+                      style="width:100%">
                       <thead>
                         <tr>
                           <th class="text-center">Nombres</th>
@@ -326,7 +344,8 @@ include_once('../templates/header.php')
                           </div>
 
                           <div class="ms-auto text-end">
-                            <a class="btn btn-link text-danger text-gradient px-3 mb-0 mostrar_detalles" data-id="" href="#!">
+                            <a class="btn btn-link text-danger text-gradient px-3 mb-0 mostrar_detalles" data-id=""
+                              href="#!">
                               <i class="material-icons text-sm me-2">delete</i>
                               Cerrar
                             </a>
@@ -358,7 +377,8 @@ include_once('../templates/header.php')
                     <div class="col-md-11 col-12 px-3">
                       <div class="input-group input-group-dynamic mt-3">
                         <label class="input-group">Nombre del rol</label>
-                        <input type="text" class="form-control" name="nombre_rol" id="nombre_rol" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                        <input type="text" class="form-control" name="nombre_rol" id="nombre_rol"
+                          aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
                       </div>
                     </div>
                     <div class="col-1 d-flex ">
@@ -456,19 +476,22 @@ include_once('../templates/header.php')
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Nombres</label>
-                          <input type="text" class="form-control w-100" aria-describedby="emailHelp" id="nombre_padre" name="nombre_padre" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" aria-describedby="emailHelp" id="nombre_padre"
+                            name="nombre_padre" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Apellidos</label>
-                          <input type="text" class="form-control w-100" aria-describedby="emailHelp" id="apellido_padre" name="apellido_padre" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="text" class="form-control w-100" aria-describedby="emailHelp" id="apellido_padre"
+                            name="apellido_padre" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="input-group input-group-dynamic mt-3">
                           <label class="form-label">Correo Electrónico</label>
-                          <input type="email" class="form-control w-100" aria-describedby="emailHelp" id="correo_padre" name="correo_padre" onfocus="focused(this)" onfocusout="defocused(this)">
+                          <input type="email" class="form-control w-100" aria-describedby="emailHelp" id="correo_padre"
+                            name="correo_padre" onfocus="focused(this)" onfocusout="defocused(this)">
                         </div>
                       </div>
                       <div class="mt-3" align="right">
@@ -488,8 +511,9 @@ include_once('../templates/header.php')
                   <div class="col-12 mt-2 mb-4">
                     <div class="mt-3" align="right">
                       <div class="px-5">
-                        <button type="button" class="btn btn-outline-danger eliminar_fila_multiple">Eliminar Seleccionados</button>
-                        <button type="button" class="btn btn-outline-success">Exportar Excel</button>
+                        <button type="button" class="btn btn-outline-danger eliminar_fila_multiple">Eliminar
+                          Seleccionados</button>
+                        <a href="#!" class="btn btn-outline-success" id="exportar_excel_padre">Exportar Excel</a>
                       </div>
                     </div>
                   </div>
@@ -516,7 +540,8 @@ include_once('../templates/header.php')
                         <td>REBOLLAR TOVAR</td>
                         <td>soporte@appescolarv4.com</td>
                         <td>
-                          <a class="btn text-white bg-info btnMostrar" data-bs-toggle="tooltip" data-bs-title="Asignar un hijo">
+                          <a class="btn text-white bg-info btnMostrar" data-bs-toggle="tooltip"
+                            data-bs-title="Asignar un hijo">
                             <i class="fa-solid fa-user-tag"></i>
                           </a>
                           </a>
@@ -529,7 +554,8 @@ include_once('../templates/header.php')
                           <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="QR">
                             <i class="fa-solid fa-qrcode"></i>
                           </a>
-                          <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                          <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip"
+                            data-bs-title="Eliminar">
                             <i class="fa-solid fa-trash"></i>
                           </a>
                         </td>
@@ -560,19 +586,22 @@ include_once('../templates/header.php')
                         <div class="col-12 col-lg-4 px-2">
                           <div class="input-group input-group-dynamic mt-3">
                             <label class="input-group">Nombres</label>
-                            <input type="text" class="form-control" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                            <input type="text" class="form-control" aria-describedby="emailHelp" onfocus="focused(this)"
+                              onfocusout="defocused(this)">
                           </div>
                         </div>
                         <div class="col-12 col-lg-4 px-2">
                           <div class="input-group input-group-dynamic mt-3">
                             <label class="input-group">Apellidos</label>
-                            <input type="text" class="form-control" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                            <input type="text" class="form-control" aria-describedby="emailHelp" onfocus="focused(this)"
+                              onfocusout="defocused(this)">
                           </div>
                         </div>
                         <div class="col-12 col-lg-4 px-2">
                           <div class="input-group input-group-dynamic mt-3">
                             <label class="input-group">Matricula</label>
-                            <input type="text" class="form-control" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                            <input type="text" class="form-control" aria-describedby="emailHelp" onfocus="focused(this)"
+                              onfocusout="defocused(this)">
                           </div>
                         </div>
                       </div>
@@ -594,7 +623,6 @@ include_once('../templates/header.php')
                             <label class="input-group">Nivel</label>
                             <select name="" id="" class="form-control" aria-label="Default select example">
                               <option selected>Selecciona una opción</option>
-                              <option value="1">Rol </option>
                             </select>
                           </div>
                         </div>
@@ -603,7 +631,6 @@ include_once('../templates/header.php')
                             <label class="input-group">Grado</label>
                             <select name="" id="" class="form-control" aria-label="Default select example">
                               <option selected>Selecciona una opción</option>
-                              <option value="1">Rol </option>
                             </select>
                           </div>
                         </div>
@@ -612,7 +639,6 @@ include_once('../templates/header.php')
                             <label class="input-group">Grupo</label>
                             <select name="" id="" class="form-control" aria-label="Default select example">
                               <option selected>Selecciona una opción</option>
-                              <option value="1">Rol </option>
                             </select>
                           </div>
                         </div>
@@ -644,59 +670,64 @@ include_once('../templates/header.php')
                       <ul class="list-group col-12 col-md-12 p-2">
                         <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                           <div class="d-flex flex-column">
-                            <span class="mb-2 text-sm">Nombres: <span class="text-dark ms-sm-2 font-weight-bold">Adrian</span></span>
-                            <span class="mb-2 text-sm">Apellidos: <span class="text-dark font-weight-bold ms-sm-2">REBOLLAR TOVAR</span></span>
-                            <span class="mb-2 text-sm">Correo electrónico: <span class="text-dark font-weight-bold ms-sm-2">soporte@appescolarv4.com</span></span>
-                            <span class="mb-2 text-sm">Creado: <span class="text-dark font-weight-bold ms-sm-2">2021-08-16 10:11:00</span></span>
+                            <span class="mb-2 text-sm">Nombres: <span
+                                class="text-dark ms-sm-2 font-weight-bold">Adrian</span></span>
+                            <span class="mb-2 text-sm">Apellidos: <span
+                                class="text-dark font-weight-bold ms-sm-2">REBOLLAR TOVAR</span></span>
+                            <span class="mb-2 text-sm">Correo electrónico: <span
+                                class="text-dark font-weight-bold ms-sm-2">soporte@appescolarv4.com</span></span>
+                            <span class="mb-2 text-sm">Creado: <span
+                                class="text-dark font-weight-bold ms-sm-2">2021-08-16 10:11:00</span></span>
                           </div>
                         </li>
                       </ul>
                     </div>
-                      <div class="list-group col-12 col-md-12 p-2">
-                        <h6 class="mb-0 fs-5">Estudiantes Relacionados</h6>
-                        <div class="table-responsive">
-                          <table id="example2" class="table table-striped" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th class="text-center">Nombres</th>
-                                <th class="text-center">Apellidos</th>
-                                <th class="text-center">Matricula</th>
-                                <th class="text-center">Nivel</th>
-                                <th class="text-center">Grado</th>
-                                <th class="text-center">Grupo</th>
-                                <th class="text-center">Acciones</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr class="text-center">
-                                <td>CARMEN</td>
-                                <td>REBOLLAR GARCIA </td>
-                                <td>soporte123</td>
-                                <td>PRIMARIA</td>
-                                <td>SEGUNDO</td>
-                                <td>A</td>
-                                <td>
-                                  <a class="btn text-white bg-secondary" data-bs-toggle="tooltip" data-bs-title="Detalles">
-                                    <i class="fa-solid fa-eye"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                            </tbody>
-                            <tfoot>
-                              <tr>
-                                <th class="text-center">Nombres</th>
-                                <th class="text-center">Apellidos</th>
-                                <th class="text-center">Matricula</th>
-                                <th class="text-center">Nivel</th>
-                                <th class="text-center">Grado</th>
-                                <th class="text-center">Grupo</th>
-                                <th class="text-center">Acciones</th>
-                              </tr>
-                            </tfoot>
-                          </table>
-                        </div>
-
+                    <div class="list-group col-12 col-md-12 p-2">
+                      <h6 class="mb-0 fs-5">Estudiantes Relacionados</h6>
+                      <div class="table-responsive">
+                        <table id="example2" class="table table-striped" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th class="text-center">Nombres</th>
+                              <th class="text-center">Apellidos</th>
+                              <th class="text-center">Matricula</th>
+                              <th class="text-center">Nivel</th>
+                              <th class="text-center">Grado</th>
+                              <th class="text-center">Grupo</th>
+                              <th class="text-center">Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="text-center">
+                              <td>CARMEN</td>
+                              <td>REBOLLAR GARCIA </td>
+                              <td>soporte123</td>
+                              <td>PRIMARIA</td>
+                              <td>SEGUNDO</td>
+                              <td>A</td>
+                              <td>
+                                <a class="btn text-white bg-secondary" data-bs-toggle="tooltip"
+                                  data-bs-title="Detalles">
+                                  <i class="fa-solid fa-eye"></i>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <th class="text-center">Nombres</th>
+                              <th class="text-center">Apellidos</th>
+                              <th class="text-center">Matricula</th>
+                              <th class="text-center">Nivel</th>
+                              <th class="text-center">Grado</th>
+                              <th class="text-center">Grupo</th>
+                              <th class="text-center">Acciones</th>
+                            </tr>
+                          </tfoot>
+                        </table>
                       </div>
+
+                    </div>
                   </div>
 
                   <!-- table -->
@@ -767,7 +798,7 @@ include_once('../templates/header.php')
               <div class="card">
                 <div class="card-body">
                   <h5 class="font-weight-bolder">Agregar Estudiante</h5>
-                  
+
                   <form id="estudiantes">
                     <div class="row align-items-center">
                       <div class="col-lg-12">
@@ -775,25 +806,29 @@ include_once('../templates/header.php')
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Nombres</label>
-                              <input type="text" class="form-control w-100" name="nombre_alumno" id="nombre_alumno" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="text" class="form-control w-100" name="nombre_alumno" id="nombre_alumno"
+                                onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Apellidos</label>
-                              <input type="text" class="form-control w-100" name="apellidos_alumno" id="apellidos_alumno" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="text" class="form-control w-100" name="apellidos_alumno"
+                                id="apellidos_alumno" onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Matricula</label>
-                              <input type="text" class="form-control w-100" name="matricula_alumno" id="matricula_alumno" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="text" class="form-control w-100" name="matricula_alumno"
+                                id="matricula_alumno" onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Sexo</label>
-                              <select name="sexo_alumno" id="sexo_alumno" class="form-control" aria-label="Default select example">
+                              <select name="sexo_alumno" id="sexo_alumno" class="form-control"
+                                aria-label="Default select example">
                                 <option selected>Selecciona una opción</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
@@ -807,25 +842,26 @@ include_once('../templates/header.php')
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Nivel</label>
-                              <select name="sid_nivel" id="sid_nivel" class="form-control" aria-label="Default select example">
+                              <select name="sid_nivel" id="sid_nivel" class="form-control"
+                                aria-label="Default select example">
                                 <option selected>Selecciona una opción</option>
-                                <option value="1">Rol </option>
                               </select>
                             </div>
                           </div>
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Grado</label>
-                              <select name="sid_grado" id="sid_grado" class="form-control" aria-label="Default select example">
+                              <select name="sid_grado" id="sid_grado" class="form-control"
+                                aria-label="Default select example">
                                 <option selected>Selecciona una opción</option>
-                                <option value="1">Rol </option>
                               </select>
                             </div>
                           </div>
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Grupo</label>
-                              <select name="sid_grupo" id="sid_grupo" class="form-control" aria-label="Default select example">
+                              <select name="sid_grupo" id="sid_grupo" class="form-control"
+                                aria-label="Default select example">
                                 <option selected>Selecciona una opción</option>
                                 <option value="1">Rol </option>
                               </select>
@@ -834,7 +870,8 @@ include_once('../templates/header.php')
                           <div class="col-lg-3">
                             <div class="input-group input-group-dynamic mt-3">
                               <label class="input-group">Foto</label>
-                              <input type="text" class="form-control w-100" name="foto_alumno" id="foto_alumno" onfocus="focused(this)" onfocusout="defocused(this)">
+                              <input type="text" class="form-control w-100" name="foto_alumno" id="foto_alumno"
+                                onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                           </div>
                         </div>
@@ -855,53 +892,54 @@ include_once('../templates/header.php')
             <!-- Filtro -->
             <div class="mt-3 mb-6 col-lg-12">
               <div class="card">
-                <div class="card-body d-flex flex-wrap align-items-center">
+                <form action="" id="filtro_estudiante">
+                  <div class="card-body d-flex flex-wrap align-items-center">
 
-                  <div class="col-lg-3 px-3">
-                    <div class="input-group input-group-outline mt-4">
-                      <label class="form-label">Buscar</label>
-                      <input type="text" class="form-control " aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                    <div class="col-lg-3 px-3">
+                      <div class="input-group input-group-outline mt-4">
+                        <label class="form-label">Buscar</label>
+                        <input type="text" class="form-control " aria-describedby="emailHelp" name="buscar_estudiante" id="buscar_estudiante" onfocus="focused(this)" onfocusout="defocused(this)">
+                      </div>
+                    </div>
+
+                    <div class="col-md-3 col-12 px-3">
+                      <div class="input-group input-group-dynamic mt-3">
+                        <label class="input-group">Nivel</label>
+                        <select name="filtro_nivel_alumno" id="filtro_nivel_alumno" class="form-control" aria-label="Default select example">
+                          <option selected>Selecciona una opción</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3 col-12 px-3">
+                      <div class="input-group input-group-dynamic mt-3">
+                        <label class="input-group">Grado</label>
+                        <select name="filtro_grado_alumno" id="filtro_grado_alumno" class="form-control" aria-label="Default select example">
+                          <option selected>Selecciona una opción</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3 col-12 px-3">
+                      <div class="input-group input-group-dynamic mt-3">
+                        <label class="input-group">Grupo</label>
+                        <select name="filtro_grupo_alumno" id="filtro_grupo_alumno" class="form-control" aria-label="Default select example">
+                          <option selected>Selecciona una opción</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="mt-3 text-end">
+                        <a href="#!" class="btn bg-gradient-success mb-0 me-2" id="mostrar_filtro_alumno">Filtrar</a>
+                      </div>
+                    </div>
+                    <div class="mt-3" align="right">
+                      <!-- <input type="hidden" class="id_modificar" name="id_modificar" value=""> -->
                     </div>
                   </div>
 
-                  <div class="col-md-3 col-12 px-3">
-                    <div class="input-group input-group-dynamic mt-3">
-                      <label class="input-group">Nivel</label>
-                      <select name="" id="" class="form-control" aria-label="Default select example">
-                        <option selected>Selecciona una opción</option>
-                        <option value="1">Rol </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="col-md-3 col-12 px-3">
-                    <div class="input-group input-group-dynamic mt-3">
-                      <label class="input-group">Grado</label>
-                      <select name="" id="" class="form-control" aria-label="Default select example">
-                        <option selected>Selecciona una opción</option>
-                        <option value="1">Rol </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="col-md-3 col-12 px-3">
-                    <div class="input-group input-group-dynamic mt-3">
-                      <label class="input-group">Grupo</label>
-                      <select name="" id="" class="form-control" aria-label="Default select example">
-                        <option selected>Selecciona una opción</option>
-                        <option value="1">Rol </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="mt-3 text-end">
-                      <button class="btn bg-gradient-success mb-0 me-2" type="button" name="button">Filtrar</button>
-                    </div>
-                  </div>
-
-                </div>
-
+                </form>
               </div>
             </div>
 
@@ -911,8 +949,9 @@ include_once('../templates/header.php')
                 <div class="card-header">
                   <div class="col-12 mt-2 mb-4">
                     <div class="mt-3" align="right">
-                        <button type="button" class="btn btn-outline-danger">Eliminar Seleccionados</button>
-                        <button type="button" class="btn btn-outline-success">Exportar Excel</button>
+                      <button type="button" class="btn btn-outline-danger">Eliminar Seleccionados</button>
+                      <!-- <a href="../php/excel/reporteEstudiante.php" class="btn btn-outline-success" id="exportar_excel_alumno">Exportar Excel</a> -->
+                      <a href="../php/excel/reporteEstudiante.php" class="btn btn-outline-success" id="">Exportar Excel</a>
                     </div>
                   </div>
                   <table id="tabla_estudiantes" data-name="alumno.php" class="table table-striped" style="width:100%">
@@ -929,7 +968,7 @@ include_once('../templates/header.php')
                         <th class="text-center">Acciones</th>
                       </tr>
                     </thead>
-                    <tbody class="text-center" >
+                    <tbody class="text-center">
                     </tbody>
                     <tfoot>
                       <tr>
@@ -976,7 +1015,8 @@ include_once('../templates/header.php')
                           </div>
 
                           <div class="ms-auto text-end">
-                            <a class="btn btn-link text-danger text-gradient px-3 mb-0 mostrar_detalles" data-id="" href="javascript:;">
+                            <a class="btn btn-link text-danger text-gradient px-3 mb-0 mostrar_detalles" data-id=""
+                              href="javascript:;">
                               <i class="material-icons text-sm me-2">delete</i>
                               Cerrar
                             </a>
@@ -1008,7 +1048,8 @@ include_once('../templates/header.php')
                       <p class="text-sm">Los pasos para subir un archivo son los siguientes:</p>
                     </div>
                     <div>
-                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal" data-bs-target="#fotoModal">
+                      <button type="button" class="btn bg-secondary text-white" data-bs-toggle="modal"
+                        data-bs-target="#fotoModal">
                         <i class="fa-solid fa-circle-info mx-1"></i>
                         Requerimientos de archivo
                       </button>
@@ -1063,7 +1104,7 @@ include_once('../templates/header.php')
                       </button>
                     </div>
                   </div>
-                  
+
                   <table id="example6" class="table table-striped" style="width:100%">
                     <thead>
                       <tr>
@@ -1081,13 +1122,16 @@ include_once('../templates/header.php')
                           <span class="badge badge-sm bg-gradient-success">Guardado</span>
                         </td>
                         <td>
-                          <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip" data-bs-title="Validar">
+                          <a href="#" class="btn text-white bg-warning" data-bs-toggle="tooltip"
+                            data-bs-title="Validar">
                             <i class="fa-regular fa-file-zipper"></i>
                           </a>
-                          <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip" data-bs-title="Guardar">
+                          <a href="#" class="btn text-white bg-success" data-bs-toggle="tooltip"
+                            data-bs-title="Guardar">
                             <i class="fa-regular fa-floppy-disk"></i>
                           </a>
-                          <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip" data-bs-title="Eliminar">
+                          <a href="#" class="btn text-white bg-danger" data-bs-toggle="tooltip"
+                            data-bs-title="Eliminar">
                             <i class="fa-solid fa-trash"></i>
                           </a>
                         </td>
@@ -1144,12 +1188,14 @@ include_once('../templates/header.php')
                   <li>Alergias</li>
                 </ul>
                 <p>Puede descargar el siguiente archivo base para cargar su información.</p>
-                <a href="https://api.aplicacionescolar.net/general/general-file-1613669186365.xlsx" target="_blank" rel="noopener noreferrer" class="btn btn-success">
+                <a href="https://api.aplicacionescolar.net/general/general-file-1613669186365.xlsx" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-success">
                   <i class="fa-solid fa-file-excel"></i>
                   Archivo Base
                 </a>
                 <p>A continuación una foto de como debería verse el archivo al final:</p>
-                <img src="https://aplicacionescolar.net/static/media/usuariosDB.5b3d1a14.png" alt="calificaciones_image" style="width: 95%; padding: 2%;">
+                <img src="https://aplicacionescolar.net/static/media/usuariosDB.5b3d1a14.png" alt="calificaciones_image"
+                  style="width: 95%; padding: 2%;">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
@@ -1168,7 +1214,8 @@ include_once('../templates/header.php')
               <div class="modal-body">
                 <div class="input-group input-group-outline my-3">
                   <label class="form-label">Nombre</label>
-                  <input type="text" class="form-control " aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                  <input type="text" class="form-control " aria-describedby="emailHelp" onfocus="focused(this)"
+                    onfocusout="defocused(this)">
                 </div>
                 <p>Permisos:</p>
 

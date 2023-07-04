@@ -424,7 +424,7 @@ include_once('../templates/header.php')
                     <div class="col-lg-10">
                       <div class="input-group input-group-dynamic">
                         <label class="form-label">Penalidad</label>
-                        <input type="text" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                        <input type="text" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" value="10" onfocusout="defocused(this)">
                       </div>
                     </div>
                     <div class="col-lg-2">

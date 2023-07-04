@@ -74,8 +74,7 @@ include_once('../templates/header.php')
                         </div>
                       </div>
                       <div class="mt-3" align="right">
-                        <a href="#!" class="btn bg-gradient-success mb-0 me-2"
-                          id="guardar_extracurriculares">Agregar</a>
+                        <a href="#!" class="btn bg-gradient-success mb-0 me-2" id="guardar_extracurriculares">Agregar</a>
                         <input type="hidden" class="id_modificar" name="id_modificar" value="">
                       </div>
                     </div>
@@ -153,14 +152,14 @@ include_once('../templates/header.php')
                         <div class="col-12 px-2 my-4">
                           <div class="input-group input-group-dynamic mt-3">
                             <label class="input-group">Agregar estudiante</label>
-                            <select name="extra_estudiante" id="extra_estudiante" class="form-control"
-                              aria-label="Default select example">
+                            <select name="extra_estudiante" id="extra_estudiante" class="form-control" aria-label="Default select example">
                               <option selected>Estudiante</option>
                             </select>
+                            
                           </div>
                           <div class="mt-3" align="right">
                             <a href="#!" class="btn bg-gradient-success mb-0 me-2" id="guardar_extra_alumno">Agregar</a>
-                            <!-- <input type="hidden" class="id_modificar" name="id_modificar" value=""> -->
+                            <input type="hidden" class="id_modificar" name="id_modificar" value="">
                             <input type="hidden" class="sid_extracurricular" name="sid_extracurricular"  id="sid_extracurricular" value="">
                           </div>
                         </div>
@@ -173,7 +172,7 @@ include_once('../templates/header.php')
                     <div class="card-body pt-2">
                       <div class="row mt-4">
                         <div class="table-responsive">
-                          <table id="tabla_alumno_extracurricular" data_name="" class="table table-striped" style="width:100%">
+                          <table id="tabla_alumno_extracurricular" data_name="alumno_extracurricular.php" class="table table-striped" style="width:100%">
                             <thead>
                               <tr>
                                 <th class="text-center">Nombre</th>
@@ -182,7 +181,7 @@ include_once('../templates/header.php')
                                 <th class="text-center">Acciones</th>
                               </tr>
                             </thead>
-                            <tbody class="text_center">
+                            <tbody class="text-center">
                               
                             </tbody>
                             <tfoot>

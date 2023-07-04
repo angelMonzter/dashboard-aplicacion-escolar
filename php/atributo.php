@@ -17,6 +17,11 @@ class Atributo extends DBA
 		$this->sentencia = "SELECT * FROM atributo WHERE id_atributo = '$id';";
 		return $this->obtener_sentencia();
 	}
+	public function consulta_select()
+	{
+		$this->sentencia = "SELECT id_atributo AS id, nombre FROM atributo WHERE sid_instituto = '79556';";
+		return $this->obtener_sentencia();
+	}
 	public function modificar($icono, $nombre, $valor, $id_atributo)
 	{
 		$this->sentencia = "UPDATE atributo SET icono = '$icono' ,nombre='$nombre', valor = $valor WHERE id_atributo = '$id_atributo';";
@@ -80,6 +85,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			);
 		}
 
+	}
+	if ($data['accion'] === 'mostrar_select') {
+        
+		$resultado = $obj->consulta_select();
+
+			while ( $fila = $resultado->fetch_assoc() ){
+				$arreglo[] = $fila;
+			}
+
+		$respuesta = array(
+			'respuesta' => 'select',
+			'arreglo' => $arreglo,
+		);
 	}
 
 	require("funciones.php");

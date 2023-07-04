@@ -6,7 +6,7 @@
 			return $this->obtener_sentencia();
 		}
 		public function consulta() {
-			$this->sentencia = "SELECT * FROM alumno;";
+			$this->sentencia = "SELECT alumno.id_alumno AS id_alumno, alumno.nombre AS nombre, alumno.apellido AS apellido, alumno.matricula AS matricula, alumno.sexo AS sexo, padre.nombre AS nombre_padre, nivel.nombre AS sid_nivel, grado.nombre AS sid_grado, grupo.nombre AS sid_grupo FROM alumno INNER JOIN nivel ON alumno.sid_niveL= nivel.id_nivel INNER JOIN padre ON alumno.sid_padre = padre.id_padre INNER JOIN grupo ON alumno.sid_grupo = grupo.id_grupo INNER JOIN grado ON alumno.sid_grado = grado.id_grado;";
 			return $this->obtener_sentencia();
 		}
 		public function consultar_id($id){
@@ -21,6 +21,17 @@
             $this->sentencia="DELETE FROM alumno WHERE id_alumno = '$id'";
 			return $this->ejecutar_sentencia();
 		}
+        public function consulta_select()
+        {
+        $this->sentencia = "SELECT id_alumno AS id, nombre FROM alumno WHERE sid_instituto = '79556';";
+        return $this->obtener_sentencia();
+        }
+
+        public function consultar_filtro($nivel, $grado, $grupo){
+            $this->sentencia = "SELECT alumno.id_alumno AS id_alumno, alumno.nombre AS nombre_estudiante, alumno.apellido AS app_estudiante, alumno.matricula AS matricula, alumno.sexo AS sexo, padre.nombre AS nombre_padre, nivel.nombre AS nombre_nivel, grado.nombre AS grado, grupo.nombre AS grupo FROM alumno INNER JOIN nivel ON alumno.sid_niveL= nivel.id_nivel INNER JOIN padre ON alumno.sid_padre = padre.id_padre INNER JOIN grupo ON alumno.sid_grupo = grupo.id_grupo INNER JOIN grado ON alumno.sid_grado = grado.id_grado WHERE grado.nombre LIKE '%%' OR grupo.nombre LIKE '%%' OR nivel.nombre LIKE '%%' GROUP BY alumno.matricula";
+            return $this->obtener_sentencia();
+        }
+
 		public function id($value){
 			return $this->generator($value);
 		}
@@ -81,6 +92,64 @@
                     'modulo' => 'estudiantes',
                 );
             }
+        }
+
+        if ($data['accion'] === 'mostrar_filtros') {
+            $busqueda = $datos_tabla['busqueda'];
+            $nivel = $datos_tabla['nivel'];
+            $grado = $datos_tabla['grado'];
+            $grupo = $datos_tabla['grupo'];
+            
+            $resultado = $obj->consultar_filtro('Secundaria','', '');
+
+            while ( $fila = $resultado->fetch_assoc() ){
+                $id_modulo_array[] = $fila['id_alumno'];
+                $arreglo[] = $fila;
+            }
+            // $resultado = $obj->consultar_filtro($nivel, $grado, $grupo);
+            $respuesta = array(
+                'respuesta' => 'filtro',
+                'id' => $id_modulo_array,
+                'fila' => $arreglo,
+                'modulo' => 'estudiantes',
+            );
+        }
+
+        if ($data['accion'] === 'mostrar_select') {
+        
+            $resultado = $obj->consulta_select();
+    
+                while ( $fila = $resultado->fetch_assoc() ){
+                    $arreglo[] = $fila;
+                }
+    
+            $respuesta = array(
+                'respuesta' => 'select',
+                'arreglo' => $arreglo,
+            );
+        }
+
+        if ($data['accion'] === 'excel') {
+
+            $busqueda = $datos_tabla['busqueda'];
+            $nivel = $datos_tabla['nivel'];
+            $grado = $datos_tabla['grado'];
+            $grupo = $datos_tabla['grupo'];
+
+            $resultado = $obj->consultar_filtro('Secundaria','', '');
+            $data = [];
+            while ($row = $resultado->fetch_assoc()) {
+                $data[] = $row;
+            }
+
+            require("excel/reporteEstudiantes.php");
+
+            $respuesta = array(
+                'respuesta' => 'excel',
+                'id' => $busqueda,
+                'fila' => $data,
+                'modulo' => 'estudiantes',
+            );
         }
         
         require("funciones.php");

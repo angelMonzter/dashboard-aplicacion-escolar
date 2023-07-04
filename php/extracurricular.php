@@ -13,6 +13,10 @@
             $this->sentencia = "SELECT * FROM extracurricular WHERE id_extracurricular = '$id';";
             return $this->obtener_sentencia();
         }
+        public function consulta_select(){
+            $this->sentencia = "SELECT id_extracurricular AS id, nombre FROM extracurricular WHERE sid_instituto = '1';";
+            return $this->obtener_sentencia();
+        }
 		public function modificar($nombre, $id){
 			$this->sentencia="UPDATE extracurricular SET nombre = '$nombre' WHERE id_extracurricular = '$id';";
 			$this->ejecutar_sentencia();
@@ -73,7 +77,21 @@
                 );
             }
         }
+       
+        if ($data['accion'] === 'mostrar_select') {
         
+            $resultado = $obj->consulta_select();
+    
+                while ( $fila = $resultado->fetch_assoc() ){
+                    $arreglo[] = $fila;
+                }
+    
+            $respuesta = array(
+                'respuesta' => 'select',
+                'arreglo' => $arreglo,
+            );
+        }
+
         require("funciones.php");
 
         $id = $datos_tabla['id']; 

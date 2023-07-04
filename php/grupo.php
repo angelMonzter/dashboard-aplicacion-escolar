@@ -2,7 +2,7 @@
 	require("conexion.php");
 	class Grupo extends DBA{
 		public function alta($id_grupo,$sid_grado,$nombre) {
-			$this->sentencia = "INSERT INTO grupo VALUES ('$id_grupo', $sid_grado,'$nombre');";
+			$this->sentencia = "INSERT INTO grupo VALUES ('$id_grupo', '$sid_grado','$nombre');";
 			return $this->obtener_sentencia();
 		}
 		public function consulta() {
@@ -11,6 +11,11 @@
 		}
 		public function consultar_id($id){
             $this->sentencia = "SELECT * FROM grupo WHERE id_grupo = '$id';";
+            return $this->obtener_sentencia();
+        }
+        public function consulta_select()
+        {
+            $this->sentencia = "SELECT id_grupo AS id, nombre FROM grupo;";
             return $this->obtener_sentencia();
         }
 		public function modificar($nombre, $id){
@@ -73,6 +78,20 @@
                     'modulo' => 'grupos',
                 );
             }
+        }
+
+        if ($data['accion'] === 'mostrar_select') {
+        
+            $resultado = $obj->consulta_select();
+    
+                while ( $fila = $resultado->fetch_assoc() ){
+                    $arreglo[] = $fila;
+                }
+    
+            $respuesta = array(
+                'respuesta' => 'select',
+                'arreglo' => $arreglo,
+            );
         }
 
         require("funciones.php");

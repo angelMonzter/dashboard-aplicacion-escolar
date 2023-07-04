@@ -9,6 +9,11 @@
 			$this->sentencia = "SELECT * FROM tipo_mensaje;";
 			return $this->obtener_sentencia();
 		}
+        public function consulta_select()
+        {
+            $this->sentencia = "SELECT id_tipo_mensaje AS id, nombre FROM tipo_mensaje WHERE sid_instituto = '1';";
+            return $this->obtener_sentencia();
+        }
 		public function consultar_id($id){
             $this->sentencia = "SELECT * FROM tipo_mensaje WHERE id_tipo_mensaje = '$id';";
             return $this->obtener_sentencia();
@@ -74,6 +79,20 @@
                     'modulo' => 'tipo_mensajes',
                 );
             }
+        }
+
+        if ($data['accion'] === 'mostrar_select') {
+        
+            $resultado = $obj->consulta_select();
+    
+                while ( $fila = $resultado->fetch_assoc() ){
+                    $arreglo[] = $fila;
+                }
+    
+            $respuesta = array(
+                'respuesta' => 'select',
+                'arreglo' => $arreglo,
+            );
         }
 
         require("funciones.php");
